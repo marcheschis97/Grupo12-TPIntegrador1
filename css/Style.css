@@ -138,6 +138,24 @@ section .Cursos2 {
     padding: 30px 190px;
 }
 
+article .Pagos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.ajuste{
+    width: 250px;
+    height: 150px;
+    overflow: hidden; 
+}
+
+.ajuste img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Alto completo del contenedor */
+}
 
 footer {
     padding-top: 10px;
