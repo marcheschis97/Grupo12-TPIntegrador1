@@ -98,49 +98,42 @@
 .main .formulario .tamanio-fuente {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
     justify-items: center;
 
+}
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion1 {
+    font-size: 16px;
+    color: black;
+}
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion2 {
+    font-size: 18px;
+    color: black
+}
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion3 {
+    font-size: 20px;
+    color: black
+}
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion4 {
+    font-size: 22px;
+    color: black
+}
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion5 {
+    font-size: 24px;
+    color: black
 }
 
 .main .formulario .formulario__ubicacion {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    justify-items: center;
 }
 
- .main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1,
+.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1,
 .formulario__ubicacion--ubicacion2,
 .formulario__ubicacion--ubicacion3 {
-    background-color: rgb(255, 255, 255);
+    width: 2.5em;
     height: 2em;
-    width: 2em;
-}
-
-.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1 .ubicacion1 {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    background-color: rgb(128, 128, 128);
-    height: 0.5em;
-    width: 0.8em;
-}
-
-.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion2 .ubicacion2 {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    background-color: rgb(128, 128, 128);
-    height: 0.5em;
-    width: 0.8em;
-}
-
-.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion3 .ubicacion3 {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: rgb(128, 128, 128);
-    height: 0.5em;
-    width: 0.8em;
-
 }
 
 .main .formulario .formulario__fondo {
@@ -155,4 +148,23 @@
 .formulario__fondo--fondo4 {
     width: 2.5em;
     height: 2.5em;
+}
+
+.main .formulario .boton-vinculo {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 20em) and (max-width: 48em) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .vista{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+        max-width: 70%;
+    }
 }

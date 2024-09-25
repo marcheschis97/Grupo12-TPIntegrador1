@@ -7,6 +7,7 @@
 
 
 .main .imagen-regalo{
+    margin-left: 2em;
     width: 20em;
 }
 
@@ -48,3 +49,18 @@
     height: 3.5em;
 }
 
+.main .formulario-pago .boton-vinculo{
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+@media screen and (min-width: 20em) and (max-width: 27em) {
+   .imagen-regalo{
+    display:none;
+   }
+   .formulario-pago{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em;
+   }
+}
