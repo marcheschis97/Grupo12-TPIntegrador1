@@ -7,33 +7,32 @@
 }
 
 .main .vista {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     height: 21em;
     width: 23em;
     background-image: url(../assets/fondosCard/fondo3.jpg);
 }
 
 .main .vista .vista__precio {
-    display: flex;
-    justify-content: flex-start;
     height: 2em;
-    width: 5em;
+    width: 6em;
     background-color: rgb(10, 10, 10);
+    position: absolute;
+    left: 16em;
+    padding: 0.5em;
 }
 
 .main .vista .vista__precio .vista__precio--texto {
     color: rgb(255, 255, 255);
-    margin: 0.5em;
+    padding: 0.5em;
 }
 
 .main .vista .vista__nombre--destinatario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4em;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 5em;
+    left: 5em;
 }
 
 
@@ -98,50 +97,48 @@
 .main .formulario .tamanio-fuente {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
     justify-items: center;
+}
 
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion1 {
+    font-size: 16px;
+    color: black;
+}
+
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion2 {
+    font-size: 18px;
+    color: black
+}
+
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion3 {
+    font-size: 20px;
+    color: black
+}
+
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion4 {
+    font-size: 22px;
+    color: black
+}
+
+.main .formulario .tamanio-fuente .tamanio-fuente__opcion5 {
+    font-size: 24px;
+    color: black
 }
 
 .main .formulario .formulario__ubicacion {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    justify-items: center;
 }
 
- .main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1,
+.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1,
 .formulario__ubicacion--ubicacion2,
 .formulario__ubicacion--ubicacion3 {
-    background-color: rgb(255, 255, 255);
+    width: 2.5em;
     height: 2em;
-    width: 2em;
 }
 
-.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1 .ubicacion1 {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    background-color: rgb(128, 128, 128);
-    height: 0.5em;
-    width: 0.8em;
-}
-
-.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion2 .ubicacion2 {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    background-color: rgb(128, 128, 128);
-    height: 0.5em;
-    width: 0.8em;
-}
-
-.main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion3 .ubicacion3 {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: rgb(128, 128, 128);
-    height: 0.5em;
-    width: 0.8em;
-
-}
 
 .main .formulario .formulario__fondo {
     display: grid;
@@ -155,4 +152,16 @@
 .formulario__fondo--fondo4 {
     width: 2.5em;
     height: 2.5em;
+}
+.main .formulario .boton-vinculo {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 20em) and (max-width: 48em) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
