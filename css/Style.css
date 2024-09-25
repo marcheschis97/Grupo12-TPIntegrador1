@@ -1,11 +1,17 @@
 body {
     padding: 0px;
-    margin: 0px;
+    margin-top: 200px;
     background-color: #FAF3E0;
 }
 
 header {
-    background-color: yellow;
+    background-color: #FAF3E0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 100px;
+    
 }
 
 nav {
@@ -92,6 +98,7 @@ section .Pasos {
     background-color: blue;
     color: white;
     border-radius: 20px;
+    margin: 0px 25px;
 }
 
 
@@ -177,4 +184,26 @@ footer .Nosotros .paso2 {
     color: white;
     flex: 1;
     text-align: center;
+}
+
+footer .Menu{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .Menu a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer .Menu ul :hover{
+    color: #007bff;
+}
+
+
+footer .Redes img{
+    width: 30%;
+    padding: 30px;
+    cursor: pointer;
 }
