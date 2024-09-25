@@ -2,107 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/CursosparaEmpresas.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/Style.css">
+    <link rel="stylesheet" type="text/css" href="../css/CursosparaEmpresas.css" />
     <title>Curso para Empresas</title>
-    <link rel="icon" href="./assets/icon/icono.png">
+    <link rel="icon" href="./assets/icon/icono.png" />
 </head>
 
 <body>
     <header>
         <nav>
             <div class="Logo">
-                <img src="./assets/icon/logo.jpg" alt="Logo">
+                <a class="Logo" href="../index.html">
+                    <img src="../assets/icon/logo.jpg" alt="Logo">
+                </a>
             </div>
 
-            <input type="search" placeholder="Buscar...">
+            <input type="search" placeholder="Buscar..." />
 
             <div class="Carrito">
-                <img src="./assets/image/carrito.png" alt="Carrito">
+                <img src="../assets/image/carrito.png" alt="Carrito" />
                 <p>1</p>
             </div>
         </nav>
         <div class="menuprincipal">
-            <a href="./index.html">Inicio</a>
-            <a href="./pages/calendario.html">Calendario</a>
-            <a href="./pages/paginaContacto.html">Contacto</a>
-            <a href="./pages/inicioSesion.html">Iniciar Sesion</a>
-            <a href="./pages/giftCard.html">GiftCard</a>
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/calendario.html">Calendario Academico</a>
+            <a href="../pages/CursosparaEmpresas.html">Empresas</a>
+            <a href="../pages/giftCard.html">GiftCard</a>
+            <a href="../pages/paginaContacto.html">Contacto</a>
+            <a href="../pages/inicioSesion.html">Iniciar Sesion</a>
         </div>
     </header>
     <main>
-
-
         <div class="contenedor">
-
-
-
-            <div class="titulos">
-                <h2>Titulo Curso</h2>
-                <h3>inscripción</h3>
+            <div class="titulo">
+                <h2>Cursos empresariales</h2>
+                <h3>Inscripción</h3>
             </div>
 
             <form class="formulario" action="" method="post">
+
                 <div class="contenedor-personas">
-                    <div class="persona1 formas">
-                        <label for="nombre-1">Nombre:</label>
-                        <input type="text" id="nombre-1" name="nombre-1" required>
-                        <br><br>
-
-                        <label for="nombre-1">Nombre:</label>
-                        <input type="text" id="nombre-1" name="nombre-1" required>
-                        <br><br>
-
-                        <label for="nombre-1">Nombre:</label>
-                        <input type="text" id="nombre-1" name="nombre-1" required>
-                        <br><br>
-                    </div>
-
-
-
-                    <div class="persona2 formas">
-                        <label for="apellido-2">Apellido:</label>
-                        <input type="text" id="apellido-2" name="apellido-2" required>
-                        <br><br>
-
-                        <label for="apellido-2">Apellido:</label>
-                        <input type="text" id="apellido-2" name="apellido-2" required>
-                        <br><br>
-
-                        <label for="apellido-2">Apellido:</label>
-                        <input type="text" id="apellido-2" name="apellido-2" required>
-
-                        <br><br>
-                    </div>
-
-
-
-                    <div class="persona3">
-                        <label for="dni-2">DNI:</label>
-                        <input type="text" id="dni-2" name="dni-2" required pattern="[0-9]{8,8}"
-                            title="El DNI debe tener 8 dígitos">
-                        <br><br>
-
-                        <label for="dni-2">DNI:</label>
-                        <input type="text" id="dni-2" name="dni-2" required pattern="[0-9]{8,8}"
-                            title="El DNI debe tener 8 dígitos">
-                        <br><br>
-
-                        <label for="dni-2">DNI:</label>
-                        <input type="text" id="dni-2" name="dni-2" required pattern="[0-9]{8,8}"
-                            title="El DNI debe tener 8 dígitos">
-                        <br><br>
-                    </div>
-
-                </div>
+                    <div class="persona formas">
+                        <label for="nombre-1"></label>
+                        <input type="text" id="nombre-1" name="nombre-1" required />
+                        
+                        <label for="nombre-2"></label>
+                        <input type="text" id="nombre-2" name="nombre-2" required />
                 
+                        <label for="nombre-3"></label>
+                        <input type="text" id="nombre-3" name="nombre-3" required />
+                    </div>
+                
+                    <div class="persona formas">
+                        <label for="apellido-1"></label>
+                        <input type="text" id="apellido-1" name="apellido-1" required />
+                        
+                        <label for="apellido-2"></label>
+                        <input type="text" id="apellido-2" name="apellido-2" required />
+                
+                        <label for="apellido-3"></label>
+                        <input type="text" id="apellido-3" name="apellido-3" required />
+                    </div>
+                
+                    <div class="persona formas">
+                        <label for="dni-1"></label>
+                        <input type="text" id="dni-1" name="dni-1" required pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos" />
+                
+                        <label for="dni-2"></label>
+                        <input type="text" id="dni-2" name="dni-2" required pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos" />
+                
+                        <label for="dni-3"></label>
+                        <input type="text" id="dni-3" name="dni-3" required pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos" />
+                    </div>
+                
+                    <div class="imagen">
+                        <img src="../assets/image/Cursoparaempresa.jpg" alt="boton" />
+                        <img src="../assets/image/Cursoparaempresa.jpg" alt="boton" />
+                        <img src="../assets/image/Cursoparaempresa.jpg" alt="boton" />
+                    </div>
+                </div>
             </form>
-
         </div>
-
-
-
+        <div class="bloque">
+            <img src="../assets/image/Signo+.jpg" alt="signo">
+            <p>Agregar Persona</p>
+        </div>
+        <div class="precio">
+            <p>$000.-</p>
+            <button class="boton">Inscribirse</button>
+        </div>
     </main>
     <footer>
         <div class="Nosotros">
@@ -118,18 +109,25 @@
                         <p>Luciana Rosito</p>
                     </li>
                     <li>
-                        <p> Sofia Alasina</p>
+                        <p>Sofia Alasina</p>
                     </li>
                 </ul>
-
             </div>
             <div class="Menu paso2">
-                <p>Menu Inferior</p>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/calendario.html">Calendario Academico</a></li>
+                    <li><a href="../pages/CursosparaEmpresas.html">Empresas</a></li>
+                    <li><a href="../pages/giftCard.html">GiftCard</a></li>
+                    <li><a href="../pages/paginaContacto.html">Contacto</a></li>
+                    <li><a href="../pages/inicioSesion.html">Iniciar Sesion</a></li> 
+                </ul>
             </div>
             <div class="Redes paso2">
-                <p>Link a redes sociales</p>
+                <img src="../assets/image/redes.jpg" alt="redes">
             </div>
         </div>
     </footer>
-
 </body>
+
+</html>
