@@ -1,127 +1,104 @@
-body {
-    padding: 0px;
-    margin: 0px;
-    background-color: #FAF3E0;
-}
-
-header {
-    background-color: yellow;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #f8f9fa;
-}
-
-header nav input[type="search"] {
-    padding: 5px;
-    width: 30%;
-    height: 30px;
-    border-radius: 5%;
-    outline: none;
-}
-
-header nav .Carrito {
-    display: flex;
-    height: 60px;
-}
-
-header nav .Carrito img {
-    width: 35px;
-    height: 35px;
-    padding-top: 10px;
-}
-
-header nav .Carrito p{
-    padding-top: 10px;
-}
-
-header nav .Logo {
-    display: flex;
-    width: -100px;
-    height: 60px;
-    padding-bottom: 10px;
-}
-
-header .menuprincipal {
-    display: flex;
-    justify-content: space-around;
-    /* Espacio uniforme entre los elementos */
-    padding: 20px 5%;
-    /* Relleno opcional */
-    background-color: #e9ecef;
-}
-
-.menuprincipal a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.menuprincipal a:hover {
-    color: #007bff;
-}
-
-.img_Menu img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/----MAIN-----/
-
-
-.contenedor {
-    display: flex;
-    padding-left: 100px;
-    
-}
-
-.titulos {
-    padding-left: 300px;
-    margin-top: 75px;
-}
 
 
 
-.formulario {
-    
+
+.titulo {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
+    padding-left: 400px;
+
 }
 
 .contenedor-personas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-left: 400px;
+}
+
+.formas {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.imagen {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+
+
+}
+
+.imagen img {
+    margin-bottom: 33px;
+    margin-top: 0.8px;
+    width: 6.1%;
+
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+
+.bloque{
+    display: flex;
+    flex-direction: row;
+    padding-left: 400px;
+    gap: 15px;
+}
+
+.bloque img{
+    width: 2.5%;
+}
+
+.precio{
+    display: flex;
+    background-color: black;
+    gap: 40px;
+    width: 4%;
+    margin-left: 400px;
+    margin-top: 20px;
+    height: 40px;
+}
+
+.precio p{
+    color: white;
+    font-size: 20px;
+    padding: 0px 10px;
+    margin-top: 10px;
+
+}
+
+.precio .boton{
+    border-radius: 12px;
+    background-color: rgb(255, 255, 9);
+    padding: 0px 50px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+    
+
+}
+
+.boton:hover {
+    background-color: #ff9900; 
 }
 
 footer {
-    padding-top: 200px;
+    padding-top: 85px;
 }
 
-footer .Nosotros {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 30px;
-    gap: 30px;
-    background-color: aquamarine;
-}
-
-footer .Nosotros .paso2 {
-    background-color: brown;
-    padding: 20px;
-    color: white;
-    flex: 1;
-    text-align: center;
-}
