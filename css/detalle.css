@@ -1,6 +1,6 @@
 header nav .Logo img {
     display: flex;
-    width: -100px;
+    max-width: 100px;
     height: 60px;
     padding-bottom: 10px;
 }
@@ -9,42 +9,55 @@ header nav .Logo img {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .curso-imagen img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     border-radius: 10px;
 }
 
 .curso-info {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    max-width: 70%;
 }
 
 .docente-detalle {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.docente-imagen img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .docente-info {
     flex: 1;
-    margin-left: 20px;
-}
-
-.docente-imagen img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
 }
 
 .clases-detalle {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .clase {
@@ -66,7 +79,7 @@ header nav .Logo img {
 }
 
 .clase li {
-    background-color: #fff;
+    background-color: white;
     margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;
@@ -74,6 +87,9 @@ header nav .Logo img {
 
 .detalle-cursos {
     margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .detalle-cursos h2 {
@@ -85,20 +101,55 @@ header nav .Logo img {
 .detalle-cursos-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .curso-relacionado {
     flex: 1 1 30%;
-    margin: 0 10px;
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
     text-align: center;
 }
 
-.python-imagen img, .php-imagen img, .javascript-imagen img, .sql-imagen img{
+.python-imagen img, .php-imagen img, .javascript-imagen img, .sql-imagen img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
     border-radius: 10px;
+}
+
+@media screen and (min-width: 20em) and (max-width: 48em) {
+    .curso-detalle, .docente-detalle, .detalle-cursos {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .clases-detalle {
+        flex-direction: column;
+    }
+
+    .curso-imagen img, .docente-imagen img {
+        width: 100%;
+        max-width: 12.5em;
+    }
+
+    .curso-info, .docente-info {
+        margin-left: 0.6em;
+        padding: 0.6em;
+        max-width: 65%;
+    }
+
+    .clase {
+        flex: 1 1 45%;
+    }
+
+    .detalle-cursos-list {
+        flex-wrap: wrap;
+    }
+
+    .curso-relacionado {
+        flex: 1 1 48%;
+        margin: 0.6em;
+    }
 }
