@@ -31,8 +31,27 @@
 }
 
 .boton-contacto {
+    background-color: rgb(240, 240, 52);
+    color: black;
+    border-radius: 1em;
+    border: 0.1em black solid;
+    text-align: center;
+    padding: 0.3em 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 0.5em;
     margin-bottom: 1em;
+    max-width: 100%;
+    height: 15%;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.boton-contacto:hover {
+    background-color: rgb(255, 255, 3); /* Cambio de color al pasar el ratón sobre el botón */
 }
 
 .contenedor-datos1 {

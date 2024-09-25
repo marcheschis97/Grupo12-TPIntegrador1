@@ -45,7 +45,6 @@ a {
     box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño total */
     overflow: hidden; /* Evita que el contenido se salga */
     text-align: center; /* Centra el texto */
-    position: relative; /* Para asegurar que el botón esté bien ubicado */
 }
 
 .day .today {

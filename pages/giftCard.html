@@ -26,11 +26,11 @@
         </nav>
         <div class="menuprincipal">
             <a href="../index.html">Inicio</a>
-            <a href="../pages/calendario.html">Calendario Academico</a>
-            <a href="../pages/CursosparaEmpresas.html">Empresas</a>
-            <a href="../pages/giftCard.html">GiftCard</a>
-            <a href="../pages/paginaContacto.html">Contacto</a>
-            <a href="../pages/inicioSesion.html">Iniciar Sesion</a>
+            <a href="./calendario.html">Calendario Academico</a>
+            <a href="./cursoparaempresas.html">Empresas</a>
+            <a href="#">GiftCard</a>
+            <a href="./paginaContacto.html">Contacto</a>
+            <a href="./inicioSesion.html">Iniciar Sesion</a>
         </div>
     </header>
 
@@ -39,8 +39,7 @@
         <section>
             <article class="vista">
                 <div class="vista__precio">
-                    <div class="vista__precio--texto">$10.000</div>
-                    
+                    <span class="vista__precio--texto">$10.000</span>
                 </div>
                 <div>
                     <h1 class="vista__nombre--destinatario">Destinatario</h1>
@@ -59,7 +58,7 @@
                 <div>
                     <label for="nombreDestinatario"> Nombre del destinatario: </label> <br />
                     <input type="text" name="Nombre del destinatario" id="nombreDestinatario"
-                        placeholder="Agregar el nombre del destinatario" />
+                        placeholder="Agregar el nombre del destinatario" required />
                 </div>
                 <br />
                 <label for="colorFuente">Color de la fuente: </label>
@@ -90,11 +89,11 @@
                 <br />
                 <label for="tamanioFuente">Tamaño de la fuente: </label>
                 <div class="tamanio-fuente">
-                    <div class="tamanio-fuente__opcion1">20px</div>
-                    <div class="tamanio-fuente__opcion2">28px</div>
-                    <div class="tamanio-fuente__opcion3">32px </div>
-                    <div class="tamanio-fuente__opcion4">48px </div>
-                    <div class="tamanio-fuente__opcion5">60px </div>
+                    <span>20px </span>
+                    <span>28px </span>
+                    <span>32px </span>
+                    <span>48px </span>
+                    <span>60px </span>
 
                     <div>
                         <input type="radio" name="tamanioFuente" id="20px" />
@@ -123,14 +122,19 @@
                 <br />
                 <label for="ubicacion">Ubicacion: </label>
                 <div class="formulario__ubicacion">
-                    <img src="../assets/fondosCard/ubicacion1.png" alt="Ubicación 1"
-                        class="formulario__ubicacion--ubicacion1" />
 
-                    <img src="../assets/fondosCard/ubicacion2.png" alt="ubicación 2"
-                        class="formulario__ubicacion--ubicacion2" />
-
-                    <img src="../assets/fondosCard/ubicacion3.png" alt="Ubicación 3"
-                        class="formulario__ubicacion--ubicacion3" />
+                    <div class="formulario__ubicacion--ubicacion1">
+                        <div class="ubicacion1">
+                        </div>
+                    </div>
+                    <div class="formulario__ubicacion--ubicacion2">
+                        <div class="ubicacion2">
+                        </div>
+                    </div>
+                    <div class="formulario__ubicacion--ubicacion3">
+                        <div class="ubicacion3">
+                        </div>
+                    </div>
 
                     <div>
                         <input type="radio" name="ubicacion" id="ubicacion1" />
@@ -151,29 +155,25 @@
                     <img src="../assets/fondosCard/fondo3.jpg" alt="Fondo cuadrados azules"
                         class="formulario__fondo--fondo3">
                     <img src="../assets/fondosCard/fondo4.jpg" alt="Fondo rama" class="formulario__fondo--fondo4" />
-
-
-                    <div>
-                        <input type="radio" name="fondoTarjeta" id="fondo1" />
-                    </div>
-                    <div>
-                        <input type="radio" name="fondoTarjeta" id="fondo2" />
-                    </div>
-                    <div>
-                        <input type="radio" name="fondoTarjeta" id="fondo3" />
-                    </div>
-                    <div>
-                        <input type="radio" name="fondoTarjeta" id="fondo4" />
-                    </div>
+                <div>
+                    <input type="radio" name="fondoTarjeta" id="fondo1" />
                 </div>
+                <div>
+                    <input type="radio" name="fondoTarjeta" id="fondo2" />
+                </div>
+                <div>
+                    <input type="radio" name="fondoTarjeta" id="fondo3" />
+                </div>
+                <div>
+                    <input type="radio" name="fondoTarjeta" id="fondo4" />
+                </div>
+            </div>
                 <br />
-                <button type="button">
-                    <a href="../pages/pagoDeGift.html" class="boton-vinculo">Confirmar</a>
+                <button type="submit">
+                    <a href="../pages/pagoDeGift.html" target="_blank">Confirmar</a>
                 </button>
 
-                <button type="button">
-                    <a href="../index.html" class="boton-vinculo">Volver</a>
-                </button>
+                <button type="button"> Volver </button>
 
             </form>
         </section>
@@ -201,11 +201,11 @@
             <div class="Menu paso2">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/calendario.html">Calendario Academico</a></li>
-                    <li><a href="../pages/CursosparaEmpresas.html">Empresas</a></li>
-                    <li><a href="../pages/giftCard.html">GiftCard</a></li>
-                    <li><a href="../pages/paginaContacto.html">Contacto</a></li>
-                    <li><a href="../pages/inicioSesion.html">Iniciar Sesion</a></li> 
+                    <li><a href="./calendario.html">Calendario Academico</a></li>
+                    <li><a href="./cursoparaempresas.html">Empresas</a></li>
+                    <li><a href="./giftCard.html">GiftCard</a></li>
+                    <li><a href="./paginaContacto.html">Contacto</a></li>
+                    <li><a href="./inicioSesion.html">Iniciar Sesion</a></li>
                 </ul>
             </div>
             <div class="Redes paso2">

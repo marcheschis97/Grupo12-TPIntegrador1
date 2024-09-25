@@ -2,6 +2,8 @@ body {
     padding: 0px;
     margin-top: 200px;
     background-color: #FAF3E0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 header {
@@ -11,7 +13,7 @@ header {
     left: 0;
     width: 100%;
     margin-bottom: 100px;
-    
+
 }
 
 nav {
@@ -175,7 +177,7 @@ footer .Nosotros {
     justify-content: space-between;
     padding: 20px 30px;
     gap: 30px;
-    background-color: aquamarine;
+    background-color: #e9ecef;
 }
 
 footer .Nosotros .paso2 {
