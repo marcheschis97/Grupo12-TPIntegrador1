@@ -12,15 +12,14 @@ a {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 0.25fr repeat(5, 8em);
-    width: 100%;
+    width: 95%;
     height: 100%;
-    margin-top: 1em;
-    margin-bottom: 3em;
+    margin: 1em auto 3em auto;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Estilo para las celdas de los días y la cabecera */
-.header,
+.header-calendar,
 .day {
     border: 0.1em solid #4d4d4d;
     display: flex;
@@ -30,7 +29,7 @@ a {
 }
 
 /* Estilo para la cabecera de los días de la semana */
-.header {
+.header-calendar {
     align-items: center;
     background-color: #FF6F61;
     font-weight: bold;
@@ -43,6 +42,10 @@ a {
 .day {
     background-color: #e9ecef;
     font-size: 0.8em;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño total */
+    overflow: hidden; /* Evita que el contenido se salga */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Para asegurar que el botón esté bien ubicado */
 }
 
 .day .today {
@@ -51,39 +54,93 @@ a {
     padding: 4px;
 }
 
-.link-curso {
-    display: inline-block;
-    /* Cambia a inline-block para que el enlace solo ocupe el espacio del contenido del párrafo */
-    text-decoration: none;
-    margin-top: 1em;
-}
-
 .boton-calendario {
     background-color: rgb(240, 240, 52);
     color: black;
     border-radius: 1em;
     border: 0.1em black solid;
     text-align: center;
-    padding: 0.5em 1em;
-    /* Añade padding para mejorar la apariencia y adaptabilidad */
+    padding: 0.3em 0.6em;
     display: flex;
-    /* Usamos flexbox para centrar el texto dentro del párrafo */
     align-items: center;
     justify-content: center;
     margin: 0;
-    /* Elimina el margen para evitar desplazamientos inesperados */
     max-width: 100%;
-    /* Limita el ancho máximo del párrafo para hacerlo más adaptable */
+    height: 40%;
     box-sizing: border-box;
-    /* Incluye el padding y border en el tamaño total */
     cursor: pointer;
-    /* Cursor de mano al pasar sobre el botón */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
     transition: background-color 0.3s;
-    /* Transición suave para el color de fondo */
 }
 
 .boton-calendario:hover {
     background-color: rgb(255, 255, 3); /* Cambio de color al pasar el ratón sobre el botón */
+}
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width: 1024px) {
+    .titulo-calendario h1 {
+        font-size: 1.8em;
+    }
+
+    .texto-calendario p {
+        font-size: 1em;
+    }
+
+    .calendar {
+        grid-template-rows: 0.25fr repeat(5, 6em); /* Reduce el tamaño de las filas */
+    }
+
+    .boton-calendario {
+        padding: 0.4em 0.8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titulo-calendario h1 {
+        font-size: 1.5em;
+    }
+
+    .texto-calendario p {
+        font-size: 0.9em;
+    }
+
+    .calendar {
+        grid-template-rows: 0.25fr repeat(5, 5em); /* Ajusta aún más las filas */
+    }
+
+    .header-calendar {
+        font-size: 0.9em;
+    }
+
+    .boton-calendario {
+        padding: 0.3em 0.6em;
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo-calendario h1 {
+        font-size: 1.2em;
+    }
+
+    .texto-calendario p {
+        font-size: 0.8em;
+    }
+
+    .calendar {
+        grid-template-rows: 0.25fr repeat(5, 4em); /* Reduce más las filas */
+        width: 100%;
+        margin: 1em 0 3em 0;
+    }
+
+    .header-calendar,
+    .day {
+        font-size: 0.7em;
+    }
+
+    .boton-calendario {
+        padding: 0.2em 0.4em;
+        font-size: 0.6em;
+    }
 }
