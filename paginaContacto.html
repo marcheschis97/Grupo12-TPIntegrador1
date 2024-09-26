@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/Style.css">
+    <link rel="stylesheet" type="text/css" href="../css/Calendario.css">
+    <link rel="stylesheet" type="text/css" href="../css/inicioSesion.css">
+    <link rel="stylesheet" type="text/css" href="../css/paginaContacto.css">
+    <title>Contacto</title>
+    <link rel="icon" href="../assets/icon/icono.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a class="Logo" href="../index.html">
+                    <img src="../assets/icon/logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <input type="search" placeholder="Buscar...">
+            <div class="Carrito">
+                <img src="../assets/image/carrito.png" alt="Carrito">
+                <p>1</p>
+            </div>
+        </nav>
+        <div class="menuprincipal">
+            <a href="../index.html">Inicio</a>
+            <a href="./calendario.html">Calendario Academico</a>
+            <a href="./giftCard.html">GiftCard</a>
+            <a href="#">Contacto</a>
+            <a href="./inicioSesion.html">Iniciar Sesion</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="contenedores-generales">
+            <article class="contenedor-contacto">
+                <div class="contenedor-formulario-contacto">
+                    <h1>Contactanos</h1>
+                    <form class="formulario" id="contact-form" action="../index.html" method="GET">
+                        <label for="name">Nombre y Apellido</label>
+                        <input class="form-control tamano-input-contacto" type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+
+                        <label for="email">Email</label>
+                        <input class="form-control tamano-input-contacto" type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+                        <label for="phone">Teléfono (opcional)</label>
+                        <input class="form-control tamano-input-contacto" type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)" required>
+
+                        <label for="message">Consulta</label>
+                        <textarea class="form-control tamano-input-contacto" id="message" name="message" placeholder="Escribe tu consulta aquí..."
+                            required></textarea>
+
+                        <button class="boton-contacto boton-contacto">Enviar</button>
+                    </form>
+                </div>
+                <div class="contenedor-datos1">
+                    <div class="contenedor-datos2">
+                        <h1>Contacto de la empresa</h1>
+                        <p>Florencio Varela 1903</p>
+                        <p>San Justo, Buenos Aires, Argentina</p>
+                        <p>(+5411) 4480-8900</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="contenedor-mapa contenedores-generales">
+            <div>
+                <p class="titulo-mapa">MAPA</p>
+            </div>
+            <div class="contendor_imagen-mapa">
+                <img class="imagen-mapa" src="../assets/image/mapa.JPG" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="Nosotros">
+            <div class="Datos paso2">
+                <ul>
+                    <li>
+                        <p>Santiago Montero</p>
+                    </li>
+                    <li>
+                        <p>Sebastian Marcheschi</p>
+                    </li>
+                    <li>
+                        <p>Luciana Rosito</p>
+                    </li>
+                    <li>
+                        <p> Sofia Alasina</p>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="Menu paso2">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./calendario.html">Calendario Academico</a></li>
+                    <li><a href="./giftCard.html">GiftCard</a></li>
+                    <li><a href="./paginaContacto.html">Contacto</a></li>
+                    <li><a href="./inicioSesion.html">Iniciar Sesion</a></li>
+                </ul>
+            </div>
+            <div class="Redes paso2">
+                <img src="../assets/image/redes.jpg" alt="redes">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
