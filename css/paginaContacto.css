@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 15em;
+    margin-left: 25em;
 }
 
 .contenedor-formulario-contacto h1 {
@@ -58,16 +58,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 25em;
 }
 
 .contenedor-datos2 {
     padding: 2em;
     border: 1px solid black;
-    margin-right: 15em;
 }
 
 .contenedor-datos2 h1 {
     text-decoration: 0.1em underline;
+}
+
+.titulo-mapa {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 2em;
 }
 
 .contenedor-mapa {
@@ -75,4 +81,36 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2em;
+}
+
+
+@media screen and (max-width: 1382px) {
+
+    .contenedor-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-formulario-contacto {
+        margin-left: 0;
+    }
+
+    .contenedor-datos1 {
+        margin-top: 2em;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 828px) {
+
+    .contendor_imagen-mapa {
+        width: 75%;
+        height: 75%;
+    }
+
+    .imagen-mapa {
+        width: 100%;
+        height: 100%;
+    }
 }

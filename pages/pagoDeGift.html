@@ -21,13 +21,11 @@
             <input type="search" placeholder="Buscar...">
             <div class="Carrito">
                 <img src="../assets/image/carrito.png" alt="Carrito">
-                <p>1</p>
             </div>
         </nav>
         <div class="menuprincipal">
             <a href="../index.html">Inicio</a>
             <a href="./calendario.html">Calendario Academico</a>
-            <a href="./cursoparaempresas.html">Empresas</a>
             <a href="./giftCard.html">GiftCard</a>
             <a href="./paginaContacto.html">Contacto</a>
             <a href="./inicioSesion.html">Iniciar Sesion</a>
@@ -45,110 +43,113 @@
                 <div>
                     <label for="emailDestinatario">Email del destinatario:</label>
                     <input type="email" name="email del destinatario" id="emailDestinatario"
-                        placeholder="Ingresar el email del destinatario" required/>
+                        placeholder="Ingresar el email del destinatario" required />
                 </div>
 
                 <h4>Medios de pago</h4>
-                
-                <label for="mediosDePagoDebito" class="textos"> Débito: </label>              
-                    <div class="formulario-pago__tarjetas">
 
-                        <img src="../assets/fondosCard/American-logo.jpg" alt="American Express Débito"
-                            class="formulario-pago__tarjetas--tarjeta1" />
+                <label for="mediosDePagoDebito" class="textos"> Débito: </label>
+                <div class="formulario-pago__tarjetas">
+
+                    <img src="../assets/fondosCard/American-logo.jpg" alt="American Express Débito"
+                        class="formulario-pago__tarjetas--tarjeta1" />
 
 
-                        <img src="../assets/fondosCard/mastercard-logo.jpg" alt="Mastercard Débito"
-                            class="formulario-pago__tarjetas--tarjeta2" />
+                    <img src="../assets/fondosCard/mastercard-logo.jpg" alt="Mastercard Débito"
+                        class="formulario-pago__tarjetas--tarjeta2" />
 
-                        <img src="../assets/fondosCard/visa-logo.jpg" alt="Visa Débito"
-                            class="formulario-pago__tarjetas--tarjeta3" />
-                        <div>
-                            <input type="radio" name="mediosDePagoDebito" id="americanDebito" />
-                        </div>
-                        <div>
-                            <input type="radio" name="mediosDePagoDebito" id="mastercardDebito" />
-                        </div>
-                        <div>
-                            <input type="radio" name="mediosDePagoDebito" id="visaDebito"/>
-                        </div>
+                    <img src="../assets/fondosCard/visa-logo.jpg" alt="Visa Débito"
+                        class="formulario-pago__tarjetas--tarjeta3" />
+                    <div>
+                        <input type="radio" name="mediosDePagoDebito" id="americanDebito" />
                     </div>
-
-                    <label for="mediosDePagoCredito" class="textos"> Crédito: </label>
-               
-                    <div class="formulario-pago__tarjetas">
-
-                        <img src="../assets/fondosCard/American-logo.jpg" alt="American Express Crédito"
-                            class="formulario-pago__tarjetas--tarjeta1" />
-
-
-                        <img src="../assets/fondosCard/mastercard-logo.jpg" alt="Mastercard Crédito"
-                            class="formulario-pago__tarjetas--tarjeta2" />
-
-                        <img src="../assets/fondosCard/visa-logo.jpg" alt="Visa Crédito"
-                            class="formulario-pago__tarjetas--tarjeta3" />
-                        <div>
-                            <input type="radio" name="mediosDePagoCredito" id="americanCredito" />
-                        </div>
-                        <div>
-                            <input type="radio" name="mediosDePagoCredito" id="mastercardCredito" />
-                        </div>
-                        <div>
-                            <input type="radio" name="mediosDePagoCredito" id="visaCredito"/>
-                        </div>
+                    <div>
+                        <input type="radio" name="mediosDePagoDebito" id="mastercardDebito" />
                     </div>
+                    <div>
+                        <input type="radio" name="mediosDePagoDebito" id="visaDebito" />
+                    </div>
+                </div>
 
-                    <label for="mediosDePagoMP" class="textos"> Mercado Pago: </label>
-                        <div class="formulario-pago__mercado-pago">
-                            <img src="../assets/fondosCard/mp-credito-logo.jpg" alt="Mercado pago crédito" class="formulario-pago__mercado-pago--c"/>
-                            <img src="../assets/fondosCard/mp-debito-logo.jpg" alt="Mercado pago débito" class="formulario-pago__mercado-pago--d"/>
+                <label for="mediosDePagoCredito" class="textos"> Crédito: </label>
 
-                            <div>
-                            <input type="radio" name="mediosDePagoMP" id="mercadoPagoCredito"/>
-                            </div>
-                            <div>
-                            <input type="radio" name="mediosDePAgoMP" id="mercadoPagoDebito"/>
-                            </div>
-                        </div>
+                <div class="formulario-pago__tarjetas">
+
+                    <img src="../assets/fondosCard/American-logo.jpg" alt="American Express Crédito"
+                        class="formulario-pago__tarjetas--tarjeta1" />
+
+
+                    <img src="../assets/fondosCard/mastercard-logo.jpg" alt="Mastercard Crédito"
+                        class="formulario-pago__tarjetas--tarjeta2" />
+
+                    <img src="../assets/fondosCard/visa-logo.jpg" alt="Visa Crédito"
+                        class="formulario-pago__tarjetas--tarjeta3" />
+                    <div>
+                        <input type="radio" name="mediosDePagoCredito" id="americanCredito" />
+                    </div>
+                    <div>
+                        <input type="radio" name="mediosDePagoCredito" id="mastercardCredito" />
+                    </div>
+                    <div>
+                        <input type="radio" name="mediosDePagoCredito" id="visaCredito" />
+                    </div>
+                </div>
+
+                <label for="mediosDePagoMP" class="textos"> Mercado Pago: </label>
+                <div class="formulario-pago__mercado-pago">
+                    <img src="../assets/fondosCard/mp-credito-logo.jpg" alt="Mercado pago crédito"
+                        class="formulario-pago__mercado-pago--c" />
+                    <img src="../assets/fondosCard/mp-debito-logo.jpg" alt="Mercado pago débito"
+                        class="formulario-pago__mercado-pago--d" />
 
                     <div>
-                        <label for="nombreDelTitular">Nombre completo del titular: </label>
-                        <input type="text" name="Nombre del titular" id="nombreDelTitular" placeholder="Nombre/s"
-                            required />
-                        <input type="text" name="Apellido del titular" id="nombreDelTitular" placeholder="Apellido/s"
-                            required />
+                        <input type="radio" name="mediosDePagoMP" id="mercadoPagoCredito" />
                     </div>
-
                     <div>
-                        <label for="dniTitular">DNI del titular:</label>
-                        <input type="text" name="D.N.I del titular" id="dniTitular" placeholder="DNI" required />
+                        <input type="radio" name="mediosDePAgoMP" id="mercadoPagoDebito" />
                     </div>
+                </div>
 
-                    <div>
-                        <label for="numeroTarjeta">Número de tarjeta:</label>
-                        <input type="tex" name="Número de la tarjeta" id="numeroTarjeta"
-                            placeholder="Número de la tarjeta" required/>
-                    </div>
+                <div>
+                    <label for="nombreDelTitular">Nombre completo del titular: </label>
+                    <input type="text" name="Nombre del titular" id="nombreDelTitular" placeholder="Nombre/s"
+                        required />
+                    <input type="text" name="Apellido del titular" id="nombreDelTitular" placeholder="Apellido/s"
+                        required />
+                </div>
 
-                    <div>
-                        <label for="codigoDeSeguridad">Código de seguridad:</label>
-                        <input type="text" name="Código de seguridad" id="codigoDeSeguridad"
-                            placeholder="Código de seguridad" required/>
-                    </div>
+                <div>
+                    <label for="dniTitular">DNI del titular:</label>
+                    <input type="text" name="D.N.I del titular" id="dniTitular" placeholder="DNI" required />
+                </div>
 
-                    <div>
-                        <label for="fechaDeVencimiento">Fecha de Vencimiento:</label>
-                        <input type="text" name="Fecha de vencimiento" id="fechaDeVencimiento" placeholder="mm/aa" required/>
-                    </div>
+                <div>
+                    <label for="numeroTarjeta">Número de tarjeta:</label>
+                    <input type="tex" name="Número de la tarjeta" id="numeroTarjeta" placeholder="Número de la tarjeta"
+                        required />
+                </div>
 
-                    <div>
-                        <button type="button">
-                            <a href="./inicioSesion.html" class="boton-vinculo">Confirmar pago</a>
-                        </button>
-                     
-                        <button type="button">
-                            <a href="../pages/giftCard.html" class="boton-vinculo">Cancelar</a>
-                        </button>
-                
+                <div>
+                    <label for="codigoDeSeguridad">Código de seguridad:</label>
+                    <input type="text" name="Código de seguridad" id="codigoDeSeguridad"
+                        placeholder="Código de seguridad" required />
+                </div>
+
+                <div>
+                    <label for="fechaDeVencimiento">Fecha de Vencimiento:</label>
+                    <input type="text" name="Fecha de vencimiento" id="fechaDeVencimiento" placeholder="mm/aa"
+                        required />
+                </div>
+
+                <div>
+                    <button type="button">
+                        <a href="#" class="boton-vinculo">Confirmar pago</a>
+                    </button>
+
+                    <button type="button">
+                        <a href="../pages/giftCard.html" class="boton-vinculo">Cancelar</a>
+                    </button>
+
             </form>
         </section>
     </main>
@@ -176,7 +177,6 @@
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./calendario.html">Calendario Academico</a></li>
-                    <li><a href="./cursoparaempresas.html">Empresas</a></li>
                     <li><a href="./giftCard.html">GiftCard</a></li>
                     <li><a href="./paginaContacto.html">Contacto</a></li>
                     <li><a href="./inicioSesion.html">Iniciar Sesion</a></li>
