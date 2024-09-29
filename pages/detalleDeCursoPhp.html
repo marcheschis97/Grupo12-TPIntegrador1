@@ -21,13 +21,11 @@
             <input type="search" placeholder="Buscar...">
             <div class="Carrito">
                 <img src="../assets/image/carrito.png" alt="Carrito">
-                <p>1</p>
             </div>
         </nav>
         <div class="menuprincipal">
             <a href="../index.html">Inicio</a>
             <a href="./calendario.html">Calendario Academico</a>
-            <a href="./cursoparaempresas.html">Empresas</a>
             <a href="./giftCard.html">GiftCard</a>
             <a href="./paginaContacto.html">Contacto</a>
             <a href="./inicioSesion.html">Iniciar Sesion</a>
@@ -38,23 +36,23 @@
 
         <section class="curso-detalle">
             <div class="curso-imagen">
-                <img src="../assets/image/sql_logo.jpeg" alt="Imagen del curso">
+                <img src="../assets/image/php_logo.jpg" alt="Imagen del curso">
             </div>
             <div class="curso-info">
-                <h1>SQL Server</h1>
-                <p>$105.000 </p>
+                <h1>Introducción a PHP</h1>
+                <p>$67.000</p>
                 <h4>Modalidad</h4>
-                <p>Presencial</p>
+                <p>Virtual</p>
                 <h4>Duración</h4>
-                <p>18hs</p>
+                <p>12hs</p>
                 <h4>Sobre el curso</h4>
-                <p>En este curso de SQL Server aprenderás a administrar, mantener y optimizar bases de datos en SQL
-                    Server, utilizando herramientas avanzadas para asegurar la integridad, seguridad y eficiencia en el
-                    manejo de grandes volúmenes de datos.</p>
+                <p>En este curso de PHP aprenderás a crear sitios web dinámicos utilizando 
+                    las principales funciones del lenguaje. Descubrirás cómo gestionar formularios, trabajar con bases de datos 
+                    y aplicar buenas prácticas para desarrollar aplicaciones web eficientes y seguras.</p>
                 <h4>Requisitos previos</h4>
                 <ul>
-                    <li>Fundamentos de Bases de Datos</li>
-                    <li>Conceptos Básicos de Programación</li>
+                    <li>Conocimientos básicos de HTML y CSS</li>
+                    <li>Nociones de lógica de programación y manejo de estructuras básicas</li>
                 </ul>
                 <a href="./inicioSesion.html"">
                     <button>Inscribirse</button>
@@ -63,31 +61,30 @@
             </div>
         </section>
 
-        <section class="unidades">
-            <h3>Contenido por clase</h3>
+        <section class="unidades"><h3>Contenido por clase</h3>
             <div class="unidad">    
             <details>
                 <summary><strong>UNIDAD 1</strong></summary>
                 <ul>
                     <li>
-                        <label for="clase1">Introducción a las bases de datos relacionales</label> 
+                        <label for="clase1">Introducción a PHP y su entorno de desarrollo</label> 
                         <div class="checkbox-container">
                             <input type="checkbox" id="clase1">
-                            <span class="duracion">15 min</span>
+                            <span class="duracion">20 min</span>
                         </div>
                     </li>
                     <li>
-                        <label for="clase2">Diseño de bases de datos y normalización</label> 
+                        <label for="clase2">Variables, tipos de datos y operadores en PHP</label> 
                         <div class="checkbox-container">
                             <input type="checkbox" id="clase2">
-                            <span class="duracion">40 min</span>
+                            <span class="duracion">25 min</span>
                         </div>
                     </li>
                     <li>
                         <label for="examen1">EXAMEN 1</label> 
                         <div class="checkbox-container">
                             <input type="checkbox" id="examen1">
-                            <span class="duracion">50 min</span>
+                            <span class="duracion">40 min</span>
                         </div>
                     </li>
                 </ul>
@@ -97,24 +94,24 @@
                 <summary><strong>UNIDAD 2</strong></summary>
                 <ul>
                     <li>
-                        <label for="clase3">Creación de bases de datos y tablas</label> 
+                        <label for="clase3">Estructuras de control: condicionales y bucles</label> 
                         <div class="checkbox-container">
                             <input type="checkbox" id="clase3">
-                            <span class="duracion">20 min</span>
+                            <span class="duracion">30 min</span>
                         </div>
                     </li>
                     <li>
-                        <label for="clase4">Manipulación de datos en SQL Server</label> 
+                        <label for="clase4">Funciones y manejo de formularios en PHP</label> 
                         <div class="checkbox-container">
                             <input type="checkbox" id="clase4">
-                            <span class="duracion">30 min</span>
+                            <span class="duracion">35 min</span>
                         </div>
                     </li>
                     <li>
                         <label for="examen2">EXAMEN 2</label> 
                         <div class="checkbox-container">
                             <input type="checkbox" id="examen2">
-                            <span class="duracion">50 min</span>
+                            <span class="duracion">40 min</span>
                         </div>
                     </li>
                 </ul>
@@ -139,6 +136,17 @@
             <h2>Cursos Relacionados</h2>
             <div class="detalle-cursos-list">
                 <div class="curso-relacionado">
+                    <div class="sql-imagen">
+                        <img src="../assets/image/sql_logo.jpeg" alt="sql logo">
+                    </div>
+                    <p>SQL Server</p>
+                    <p>18hs</p>
+                    <p>$105.000</p>
+                    <a href="/pages/detalleDeCursoSql.html">
+                        <button>Detalle del curso</button>
+                    </a>                    
+                </div>
+                <div class="curso-relacionado">
                     <div class="python-imagen">
                         <img src="../assets/image/python_logo.png" alt="python logo">
                     </div>
@@ -146,17 +154,6 @@
                     <p>21hs</p>
                     <p>$85.000</p>
                     <a href="/pages/detalleDeCursoPython.html">
-                        <button>Detalle del curso</button>
-                    </a>
-                </div>
-                <div class="curso-relacionado">
-                    <div class="php-imagen">
-                        <img src="../assets/image/php_logo.jpg" alt="php logo">
-                    </div>
-                    <p>Introducción a PHP</p>
-                    <p>12hs</p>
-                    <p>$67.000</p>
-                    <a href="/pages/detalleDeCursoPhp.html">
                         <button>Detalle del curso</button>
                     </a>
                 </div>
@@ -171,7 +168,7 @@
                 </div>
             </div>
         </section>
-
+        
     </main>
 
     <footer>
@@ -197,10 +194,9 @@
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./calendario.html">Calendario Academico</a></li>
-                    <li><a href="./cursoparaempresas.html">Empresas</a></li>
                     <li><a href="./giftCard.html">GiftCard</a></li>
                     <li><a href="./paginaContacto.html">Contacto</a></li>
-                    <li><a href="./inicioSesion.html">Iniciar Sesion</a></li>
+                    <li><a href="./inicioSesion.html">Iniciar Sesion</a></li> 
                 </ul>
             </div>
             <div class="Redes paso2">

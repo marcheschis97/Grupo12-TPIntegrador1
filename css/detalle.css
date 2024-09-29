@@ -51,38 +51,53 @@ header nav .Logo img {
     padding: 10px;
 }
 
-.clases-detalle {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 30px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.clase {
-    flex: 1 1 45%;
-    margin: 10px;
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.clase h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.clase ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.clase li {
-    background-color: white;
-    margin-bottom: 5px;
+.unidad {
+    border: 1px solid grey;
     padding: 10px;
-    border-radius: 5px;
+    background-color: #f0f0f0;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.unidades h3{
+    text-align: center;
+    margin: 20px auto;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::after {
+    content: "\25B6";
+    font-size: 16px;
+}
+
+details[open] summary::after {
+    content: "\25BC";
+}
+
+.unidad li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.duracion {
+    margin-left: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-left: 10px;
 }
 
 .detalle-cursos {
@@ -125,10 +140,6 @@ header nav .Logo img {
         max-width: 100%;
     }
 
-    .clases-detalle {
-        flex-direction: column;
-    }
-
     .curso-imagen img, .docente-imagen img {
         width: 100%;
         max-width: 12.5em;
@@ -138,10 +149,6 @@ header nav .Logo img {
         margin-left: 0.6em;
         padding: 0.6em;
         max-width: 65%;
-    }
-
-    .clase {
-        flex: 1 1 45%;
     }
 
     .detalle-cursos-list {
