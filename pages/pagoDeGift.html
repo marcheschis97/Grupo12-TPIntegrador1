@@ -38,11 +38,11 @@
         </section>
 
         <section>
-            <form class="formulario-pago" method="get" action="#">
+            <form class="formulario-pago" method="get" action="../index.html">
                 <br />
                 <div>
                     <label for="emailDestinatario">Email del destinatario:</label>
-                    <input type="email" name="email del destinatario" id="emailDestinatario"
+                    <input type="email" name="emailDestinatario" id="emailDestinatario"
                         placeholder="Ingresar el email del destinatario" required />
                 </div>
 
@@ -112,44 +112,40 @@
 
                 <div>
                     <label for="nombreDelTitular">Nombre completo del titular: </label>
-                    <input type="text" name="Nombre del titular" id="nombreDelTitular" placeholder="Nombre/s"
+                    <input type="text" name="nombreDelTitular" id="nombreDelTitular" placeholder="Nombre/s"
                         required />
-                    <input type="text" name="Apellido del titular" id="nombreDelTitular" placeholder="Apellido/s"
+                    <input type="text" name="nombreDelTitular" id="apellidoDelTitular" placeholder="Apellido/s"
                         required />
                 </div>
 
                 <div>
                     <label for="dniTitular">DNI del titular:</label>
-                    <input type="number" name="D.N.I del titular" id="dniTitular" min="10000000" placeholder="DNI" required />
+                    <input type="number" name="dniTitular" id="dniTitular" min="10000000" placeholder="DNI" required />
                 </div>
 
                 <div>
                     <label for="numeroTarjeta">Número de tarjeta:</label>
-                    <input type="number" name="Número de la tarjeta" id="numeroTarjeta" placeholder="Número de la tarjeta"
+                    <input type="number" name="numeroTarjeta" id="numeroTarjeta" placeholder="Número de la tarjeta"
                         required />
                 </div>
 
                 <div>
                     <label for="codigoDeSeguridad">Código de seguridad:</label>
-                    <input type="number" name="Código de seguridad" id="codigoDeSeguridad"
+                    <input type="number" name="codigoDeSeguridad" id="codigoDeSeguridad"
                         placeholder="Código de seguridad" required />
                 </div>
 
                 <div>
                     <label for="fechaDeVencimiento">Fecha de Vencimiento:</label>
-                    <input type="month" name="Fecha de vencimiento" id="fechaDeVencimiento" placeholder="mm/aa"
-                        required />
+                    <input type="month" name="fechaDeVencimiento" id="fechaDeVencimiento" required />
                 </div>
 
                 <div>
-                    <button type="submit">
-                        <a href="../index.html" class="boton-vinculo">Confirmar pago</a>
-                    </button>
+                         <button type="submit"> Confirmar pago </button>
 
-                    <button type="button">
-                        <a href="../pages/giftCard.html" class="boton-vinculo">Cancelar</a>
-                    </button>
-
+                        <a href="../pages/giftCard.html" class="boton-vinculo">
+                            <button type="button"> Cancelar </button>
+                        </a>
             </form>
         </section>
     </main>
