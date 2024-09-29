@@ -120,30 +120,30 @@
 
                 <div>
                     <label for="dniTitular">DNI del titular:</label>
-                    <input type="text" name="D.N.I del titular" id="dniTitular" placeholder="DNI" required />
+                    <input type="number" name="D.N.I del titular" id="dniTitular" min="10000000" placeholder="DNI" required />
                 </div>
 
                 <div>
                     <label for="numeroTarjeta">Número de tarjeta:</label>
-                    <input type="tex" name="Número de la tarjeta" id="numeroTarjeta" placeholder="Número de la tarjeta"
+                    <input type="number" name="Número de la tarjeta" id="numeroTarjeta" placeholder="Número de la tarjeta"
                         required />
                 </div>
 
                 <div>
                     <label for="codigoDeSeguridad">Código de seguridad:</label>
-                    <input type="text" name="Código de seguridad" id="codigoDeSeguridad"
+                    <input type="number" name="Código de seguridad" id="codigoDeSeguridad"
                         placeholder="Código de seguridad" required />
                 </div>
 
                 <div>
                     <label for="fechaDeVencimiento">Fecha de Vencimiento:</label>
-                    <input type="text" name="Fecha de vencimiento" id="fechaDeVencimiento" placeholder="mm/aa"
+                    <input type="month" name="Fecha de vencimiento" id="fechaDeVencimiento" placeholder="mm/aa"
                         required />
                 </div>
 
                 <div>
-                    <button type="button">
-                        <a href="#" class="boton-vinculo">Confirmar pago</a>
+                    <button type="submit">
+                        <a href="../index.html" class="boton-vinculo">Confirmar pago</a>
                     </button>
 
                     <button type="button">
