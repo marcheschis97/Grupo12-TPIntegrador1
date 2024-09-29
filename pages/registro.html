@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/Style.css">
+    <link rel="stylesheet" type="text/css" href="../css/inicioSesion.css">
     <link rel="stylesheet" type="text/css" href="../css/registro.css">
     <title>Calendario</title>
     <link rel="icon" href="../assets/icon/icono.png">
@@ -34,134 +35,108 @@
     <main>
         <!-- Titulos antes del formulario -->
         <section class="title-and-form">
-            <div>
+            <div class="contenedor_title-registrate">
                 <h1>Registrate</h1>
-                <div class="container separador mb-2"></div>
+                <div class="separador"></div>
                 <p>Completa el formulario</p>
-                <div class="container separador mb-3"></div>
+                <div class="separador"></div>
             </div>
 
             <!-- Formulario de registro -->
-            <form class="ms-0 me-0">
-                <div class="row me-0 ms-0">
-                    <div class="col-md">
-                        <div class="form-floating mb-3">
-                            <input type="Nombre" class="form-control" id="floatingInputGrid"
-                                placeholder="Juan">
-                            <label for="floatingInputGrid">Nombre</label>
-                        </div>
+            <form class="form">
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">Nombre</label>
+                        <input type="Nombre" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="Juan">
                     </div>
-                    <div class="col-md me-0">
-                        <div class="form-floating mb-3">
-                            <input type="Apellido" class="form-control" id="floatingInputGrid"
-                                placeholder="Perez">
-                            <label for="floatingInputGrid">Apellido</label>
-                        </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">Apellido</label>
+                        <input type="Apellido" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="Perez">
                     </div>
                 </div>
-                <div class="row me-0 ms-0">
-                    <div class="col-md">
-                        <div class="form-floating mb-3">
-                            <input type="dni" class="form-control" id="floatingInputGrid"
-                                placeholder="40228936">
-                            <label for="floatingInputGrid">DNI</label>
-                        </div>
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">DNI</label>
+                        <input type="dni" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="40228936">
                     </div>
-                    <div class="col-md me-0">
-                        <div class="form-floating mb-3">
-                            <input type="celular" class="form-control" id="floatingInputGrid"
-                                placeholder="1158699057">
-                            <label for="floatingInputGrid">Celular</label>
-                        </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">Celular</label>
+                        <input type="celular" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="1158699057">
                     </div>
                 </div>
-                <div class="row me-0 ms-0">
-                    <div class="col-md">
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInputGrid"
-                                placeholder="ejemplo@ejemplo.com.ar">
-                            <label for="floatingInputGrid">Email</label>
-                        </div>
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">Email</label>
+                        <input type="email" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="ejemplo@ejemplo.com.ar">
                     </div>
-                    <div class="col-md me-0">
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingInputGrid"
-                                placeholder="contraseña">
-                            <label for="floatingInputGrid">Contraseña</label>
-                        </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">Contraseña</label>
+                        <input type="password" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="contraseña">
                     </div>
                 </div>
-                <div class="row me-0 ms-0">
-                    <div class="col-md">
-                        <div class="form-floating mb-3">
-                            <select class="form-select" aria-label="Genero">
-                                <option selected>-------------</option>
-                                <option value="femenino">Femenino</option>
-                                <option value="masculino">Masculino</option>
-                            </select>
-                            <label for="floatingInputGrid">Genero</label>
-                        </div>
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">Genero</label>
+                        <select class="form-control tamano-input-registro" aria-label="Genero">
+                            <option selected>-------------</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                        </select>
                     </div>
-                    <div class="col-md me-0">
-                        <div class="form-floating mb-3">
-                            <input type="calle" class="form-control" id="floatingInputGrid"
-                                placeholder="Beron de Astra">
-                            <label for="floatingInputGrid">Calle</label>
-                        </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">Calle</label>
+                        <input type="calle" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="Beron de Astra">
                     </div>
                 </div>
-                <div class="row me-0 ms-0">
-                    <div class="col-md-3">
-                        <div class="form-floating mb-3">
-                            <input type="numero" class="form-control" id="floatingInputGrid"
-                                placeholder="115">
-                            <label for="floatingInputGrid">Numero</label>
-                        </div>
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">Numero</label>
+                        <input type="numero" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="115">
                     </div>
-                    <div class="col-md-3">
-                        <div class="form-floating mb-3">
-                            <input type="piso" class="form-control" id="floatingInputGrid"
-                                placeholder="1">
-                            <label for="floatingInputGrid">Piso</label>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-floating mb-3">
-                            <input type="dpto" class="form-control" id="floatingInputGrid"
-                                placeholder="1C">
-                            <label for="floatingInputGrid">Dpto.</label>
-                        </div>
-                    </div>
-                    <div class="col-md-3 me-0">
-                        <div class="form-floating mb-3">
-                            <input type="cp" class="form-control" id="floatingInputGrid"
-                                placeholder="1766">
-                            <label for="floatingInputGrid">CP</label>
-                        </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">Piso</label>
+                        <input type="piso" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="1">
                     </div>
                 </div>
-                <div class="row me-0 ms-0">
-                    <div class="col-md">
-                        <div class="form-floating mb-3">
-                            <input type="provincia" class="form-control" id="floatingInputGrid"
-                                placeholder="Buenos Aires">
-                            <label for="floatingInputGrid">Provincia</label>
-                        </div>
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">Dpto.</label>
+                        <input type="dpto" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="1C">
                     </div>
-                    <div class="col-md me-0">
-                        <div class="form-floating mb-3">
-                            <input type="ciudad" class="form-control" id="floatingInputGrid"
-                                placeholder="La Tablada">
-                            <label for="floatingInputGrid">Ciudad</label>
-                        </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">CP</label>
+                        <input type="cp" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="1766">
+                    </div>
+                </div>
+                <div class="contenedores_form">
+                    <div class="input-label input-label-izq">
+                        <label for="floatingInputGrid">Provincia</label>
+                        <input type="provincia" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="Buenos Aires">
+                    </div>
+                    <div class="input-label">
+                        <label for="floatingInputGrid">Ciudad</label>
+                        <input type="ciudad" class="form-control tamano-input-registro" id="floatingInputGrid"
+                            placeholder="La Tablada">
                     </div>
                 </div>
             </form>
-            <div class="contenedor-registrarme text-center">
+
+            <div class="contenedor-registrarme contenedor_title-registrate">
                 <button class="boton-registrarme" type="submit" title="Registrarme"
                     name="registrarme">Registrarme</button>
             </div>
-            <div class="container separador mt-3"></div>
         </section>
     </main>
     <footer>
@@ -189,7 +164,7 @@
                     <li><a href="./calendario.html">Calendario Academico</a></li>
                     <li><a href="./giftCard.html">GiftCard</a></li>
                     <li><a href="./paginaContacto.html">Contacto</a></li>
-                    <li><a href="./inicioSesion.html">Iniciar Sesion</a></li> 
+                    <li><a href="./inicioSesion.html">Iniciar Sesion</a></li>
                 </ul>
             </div>
             <div class="Redes paso2">
