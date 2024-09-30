@@ -43,41 +43,41 @@
             </div>
 
             <!-- Formulario de registro -->
-            <form class="form">
+            <form class="form" action="../index.html" method="GET">
                 <div class="contenedores_form">
                     <div class="input-label input-label-izq">
                         <label for="floatingInputGrid">Nombre</label>
                         <input type="Nombre" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="Juan">
+                            placeholder="Juan" required>
                     </div>
                     <div class="input-label">
                         <label for="floatingInputGrid">Apellido</label>
                         <input type="Apellido" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="Perez">
+                            placeholder="Perez" required>
                     </div>
                 </div>
                 <div class="contenedores_form">
                     <div class="input-label input-label-izq">
                         <label for="floatingInputGrid">DNI</label>
                         <input type="dni" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="40228936">
+                            placeholder="40228936" required>
                     </div>
                     <div class="input-label">
                         <label for="floatingInputGrid">Celular</label>
                         <input type="celular" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="1158699057">
+                            placeholder="1158699057" required>
                     </div>
                 </div>
                 <div class="contenedores_form">
                     <div class="input-label input-label-izq">
                         <label for="floatingInputGrid">Email</label>
                         <input type="email" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="ejemplo@ejemplo.com.ar">
+                            placeholder="ejemplo@ejemplo.com.ar" required>
                     </div>
                     <div class="input-label">
                         <label for="floatingInputGrid">Contraseña</label>
                         <input type="password" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="contraseña">
+                            placeholder="contraseña" required>
                     </div>
                 </div>
                 <div class="contenedores_form">
@@ -92,14 +92,14 @@
                     <div class="input-label">
                         <label for="floatingInputGrid">Calle</label>
                         <input type="calle" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="Beron de Astra">
+                            placeholder="Beron de Astra" required>
                     </div>
                 </div>
                 <div class="contenedores_form">
                     <div class="input-label input-label-izq">
                         <label for="floatingInputGrid">Numero</label>
                         <input type="numero" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="115">
+                            placeholder="115" required>
                     </div>
                     <div class="input-label">
                         <label for="floatingInputGrid">Piso</label>
@@ -116,27 +116,26 @@
                     <div class="input-label">
                         <label for="floatingInputGrid">CP</label>
                         <input type="cp" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="1766">
+                            placeholder="1766" required>
                     </div>
                 </div>
                 <div class="contenedores_form">
                     <div class="input-label input-label-izq">
                         <label for="floatingInputGrid">Provincia</label>
                         <input type="provincia" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="Buenos Aires">
+                            placeholder="Buenos Aires" required>
                     </div>
                     <div class="input-label">
                         <label for="floatingInputGrid">Ciudad</label>
                         <input type="ciudad" class="form-control tamano-input-registro" id="floatingInputGrid"
-                            placeholder="La Tablada">
+                            placeholder="La Tablada" required>
                     </div>
                 </div>
+                <div class="contenedor-registrarme contenedor_title-registrate">
+                    <button class="boton-registrarme" title="Registrarme"
+                        name="registrarme">Registrarme</button>
+                </div>
             </form>
-
-            <div class="contenedor-registrarme contenedor_title-registrate">
-                <button class="boton-registrarme" type="submit" title="Registrarme"
-                    name="registrarme">Registrarme</button>
-            </div>
         </section>
     </main>
     <footer>
