@@ -1,19 +1,18 @@
 body {
     padding: 0px;
     margin-top: 200px;
-    background-color: #FAF3E0;
+    background-color: #faf3e0;
     margin-left: 0;
     margin-right: 0;
 }
 
 header {
-    background-color: #FAF3E0;
+    background-color: #faf3e0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     margin-bottom: 100px;
-
 }
 
 nav {
@@ -99,30 +98,31 @@ section .Pasos {
     margin: 0px 25px;
 }
 
-
 section h2 {
     padding-top: 80px;
     text-align: center;
-
 }
 
 section .Cursos {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 0px 190px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5%;
 }
-.estiloscursos{
+
+.estiloscursos {
     padding: 30px;
-    margin: 0px 40px;
-    background-color: #FF6F61;
+    margin: 20px;
+    background-color: #ff6f61;
     color: white;
-    flex: 1;
+    flex: 1 1 calc(30% - 40px);
     border-radius: 50px;
 }
 
-button{
+
+
+button {
     border-radius: 15px;
     background-color: yellow;
     padding: 10px 20px;
@@ -130,10 +130,9 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: #007bff;
 }
-
 
 section .Cursos2 {
     display: flex;
@@ -143,7 +142,7 @@ section .Cursos2 {
     padding: 30px 190px;
 }
 
-article .Pagos{
+article .Pagos {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -151,15 +150,16 @@ article .Pagos{
     padding-top: 50px;
 }
 
-.ajuste{
+.ajuste {
     width: 250px;
     height: 150px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .ajuste img {
-    width: 100%; /* Ancho completo del contenedor */
-    height: 100%; /* Alto completo del contenedor */
+    width: 100%;
+
+    height: 100%;
 }
 
 footer {
@@ -184,24 +184,76 @@ footer .Nosotros .paso2 {
     text-align: center;
 }
 
-footer .Menu{
+footer .Menu {
     display: flex;
     flex-direction: column;
 }
 
-footer .Menu a{
+footer .Menu a {
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
 
-footer .Menu ul :hover{
+footer .Menu ul :hover {
     color: #007bff;
 }
 
-
-footer .Redes img{
+footer .Redes img {
     width: 30%;
     padding: 30px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    header nav input[type="search"] {
+        width: 50%;
+    }
+
+    .paso {
+        flex: 1 1 calc(100% - 20px);
+        margin: 10px 0;
+    }
+
+    section .Cursos {
+        padding: 0;
+    }
+
+    .estiloscursos {
+        flex: 1 1 calc(45% - 20px);
+    }
+
+    section h2 {
+        padding-top: 40px;
+    }
+
+    footer .Redes img {
+        width: 50%;
+        padding-top: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .estiloscursos {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    section h2 {
+        padding-top: 20px;
+    }
+
+    header .menuprincipal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menuprincipal a {
+        padding: 10px 5%;
+    }
 }
