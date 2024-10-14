@@ -35,8 +35,18 @@ header nav input[type="search"] {
 }
 
 header nav .Carrito {
-    display: flex;
     height: 60px;
+}
+
+header nav .Carrito a {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+}
+
+header nav .Carrito a p {
+    font-family: "Montserrat", sans-serif;
+    color: black;
 }
 
 header nav .Carrito img {
