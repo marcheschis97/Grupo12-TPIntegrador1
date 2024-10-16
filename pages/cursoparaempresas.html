@@ -42,43 +42,43 @@
                 <h3>Inscripción</h3>
             </div>
 
-            <form class="formulario" action="" method="post">
+            <form method="get" action="../pages/carrito.html" class="formulario" >
 
                 <div class="contenedor-personas">
                     <div class="persona formas">
                         <label for="nombre-1"></label>
-                        <input type="text" id="nombre-1" name="nombre-1" required />
+                        <input type="text" id="nombre-1" name="nombre-1" placeholder="Nombre/s" required/>
 
                         <label for="nombre-2"></label>
-                        <input type="text" id="nombre-2" name="nombre-2" required />
+                        <input type="text" id="nombre-2" name="nombre-2" placeholder="Nombre/s" required />
 
                         <label for="nombre-3"></label>
-                        <input type="text" id="nombre-3" name="nombre-3" required />
+                        <input type="text" id="nombre-3" name="nombre-3" placeholder="Nombre/s" required />
                     </div>
 
                     <div class="persona formas">
                         <label for="apellido-1"></label>
-                        <input type="text" id="apellido-1" name="apellido-1" required />
+                        <input type="text" id="apellido-1" name="apellido-1" placeholder="Apellido/s" required/>
 
                         <label for="apellido-2"></label>
-                        <input type="text" id="apellido-2" name="apellido-2" required />
+                        <input type="text" id="apellido-2" name="apellido-2" placeholder="Apellido/s" required />
 
                         <label for="apellido-3"></label>
-                        <input type="text" id="apellido-3" name="apellido-3" required />
+                        <input type="text" id="apellido-3" name="apellido-3" placeholder="Apellido/s" required />
                     </div>
 
                     <div class="persona formas">
                         <label for="dni-1"></label>
                         <input type="text" id="dni-1" name="dni-1" required pattern="[0-9]{8}"
-                            title="El DNI debe tener 8 dígitos" />
+                            title="El DNI debe tener 8 dígitos" placeholder="Número de documento" required/>
 
                         <label for="dni-2"></label>
                         <input type="text" id="dni-2" name="dni-2" required pattern="[0-9]{8}"
-                            title="El DNI debe tener 8 dígitos" />
+                            title="El DNI debe tener 8 dígitos" placeholder="Número de documento" required/>
 
                         <label for="dni-3"></label>
                         <input type="text" id="dni-3" name="dni-3" required pattern="[0-9]{8}"
-                            title="El DNI debe tener 8 dígitos" />
+                            title="El DNI debe tener 8 dígitos" placeholder="Número de documento" required/>
                     </div>
 
                     <div class="imagen">
@@ -87,18 +87,21 @@
                         <img src="../assets/image/Cursoparaempresa.jpg" alt="boton" />
                     </div>
                 </div>
+
+                <div class="bloque">
+                    <img src="../assets/image/Signo+.jpg" alt="signo">
+                    <p>Agregar Persona</p>
+                </div>
+                <div class="precio">
+                    <p>$000.-</p>
+                    <a href="../pages/carrito.html">
+                        <button class="boton">Pagar curso</button>
+                    </a>
+                </div>
+                
             </form>
         </div>
-        <div class="bloque">
-            <img src="../assets/image/Signo+.jpg" alt="signo">
-            <p>Agregar Persona</p>
-        </div>
-        <div class="precio">
-            <p>$000.-</p>
-            <a href="#">
-                <button class="boton">Pagar curso</button>
-            </a>
-        </div>
+ 
     </main>
     <footer>
         <div class="Nosotros">
