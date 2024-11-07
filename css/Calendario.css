@@ -143,3 +143,21 @@ a {
         font-size: 0.6em;
     }
 }
+
+dialog {
+    width: 80%;
+    max-width: 350px;
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.modal-image {
+    width: 100%; /* Tamaño completo del contenedor */
+    max-width: 200px; /* Controla el ancho máximo */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 15px; /* Separación respecto a otros elementos */
+}
