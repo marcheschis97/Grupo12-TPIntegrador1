@@ -1,13 +1,12 @@
 const cursosDisponibles = JSON.parse(localStorage.getItem("cursos"));
-
 const buttons = document.querySelectorAll('.boton-calendario');
 const modal = document.querySelector('#modal');
 
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
-        const cursoNombre = event.currentTarget.getAttribute('data-cursoNombre');
-
-        const selectedCourse = cursosDisponibles.cursos.find(curso => curso.cursoNombre === cursoNombre);
+        const cursoId = parseInt(event.currentTarget.id);
+        console.log("ID del curso:", cursoId);
+        const selectedCourse = cursosDisponibles.cursos.find(curso => curso.cursoId === cursoId);
 
         if (selectedCourse) {
             modal.innerHTML = `
