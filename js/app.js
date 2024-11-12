@@ -1,4 +1,4 @@
-const cursosDispibles = {
+const cursosDisponibles = {
     cursos: [
         {
             cursoId: 1,
@@ -18,7 +18,7 @@ const cursosDispibles = {
             imagen: "../assets/image/php_logo.jpg",
             precio: 50000,
             totalPrecio: 50000,
-            url: "../pages/detalleDeCursoPhp.html",
+            url: "../pages/detalleCursos.html?cursoId=1",
         },
         {
             cursoId: 2,
@@ -37,7 +37,7 @@ const cursosDispibles = {
             imagen: "../assets/image/python_logo.png",
             precio: 85000,
             totalPrecio: 85000,
-            url: "../pages/detalleDeCursoPython.html",
+            url: "../pages/detalleCursos.html?cursoId=2",
         },
         {
             cursoId: 3,
@@ -56,7 +56,7 @@ const cursosDispibles = {
             imagen: "../assets/image/sql_logo.jpeg",
             precio: 105000,
             totalPrecio: 105000,
-            url: "../pages/detalleDeCursoSql.html",
+            url: "../pages/detalleCursos.html?cursoId=3",
         },
         {
             cursoId: 4,
@@ -75,47 +75,11 @@ const cursosDispibles = {
             imagen: "../assets/image/javascript_logo.png",
             precio: 75000,
             totalPrecio: 75000,
-            url: "../pages/detalleDeCursoSql.html",
+            url: "../pages/detalleCursos.html?cursoId=4",
         },
     ],
     cursosTotal: 315000,
     moneda: "ARS",
 };
 
-localStorage.setItem("cursos", JSON.stringify(cursosDispibles));
-
-
-const buttons = document.querySelectorAll('.boton-calendario');
-const modal = document.querySelector('#modal');
-
-buttons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        const cursoNombre = event.currentTarget.getAttribute('data-cursoNombre');
-
-        const selectedCourse = cursosDispibles.cursos.find(curso => curso.cursoNombre === cursoNombre);
-
-        if (selectedCourse) {
-            modal.innerHTML = `
-                <div class="curso-relacionado">
-                    <div class="sql-imagen">
-                        <img src="${selectedCourse.imagen}" alt="${selectedCourse.cursoNombre} logo" class="modal-image">
-                    </div>
-                    <p>Nombre: ${selectedCourse.cursoNombre}</p>
-                    <p>Duracion: ${selectedCourse.duracion}</p>
-                    <p>Precio: $${selectedCourse.precio}</p>
-                    <a href="${selectedCourse.url}">
-                        <button>Detalle del curso</button>
-                    </a>
-                    <button id="close-modal" class="btn waves-effect waves-light red lighten-2">Cerrar</button>
-                </div>
-            `;
-
-            modal.showModal();
-
-            const closeModalButton = document.querySelector('#close-modal');
-            closeModalButton.addEventListener('click', () => {
-                modal.close();
-            });
-        }
-    });
-});
+localStorage.setItem("cursos", JSON.stringify(cursosDisponibles));
