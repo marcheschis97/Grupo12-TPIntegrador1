@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return true;
     }
 
+    const mensajeConsulta = document.createElement('p');
     mensajeConsulta.id = 'mensajeConsulta';
     messageInput.parentElement.appendChild(mensajeConsulta);
 
@@ -89,24 +90,19 @@ document.addEventListener('DOMContentLoaded', function () {
         counterDisplay.textContent = `Caracteres restantes: ${remainingChars}`;
     });
 
-    // 2. Mostrar el popup al enviar usando <dialog>
     function showPopup(message) {
-        let dialog = document.getElementById('popup-dialog');
-        if (!dialog) {
-            dialog = document.createElement('dialog');
-            dialog.id = 'popup-dialog';
-            dialog.innerHTML = `
-                <p>${message}</p>
-                <button id="popup-ok">Aceptar</button>
-            `;
-            document.body.appendChild(dialog);
+        const dialog = document.getElementById('modalContacto');
 
-            // Botón para cerrar el dialog y redirigir
-            document.getElementById('popup-ok').addEventListener('click', function () {
-                dialog.close();
-                window.location.href = '../index.html';  // Redirige a la página principal
-            });
-        }
-        dialog.showModal();  // Muestra el dialog
+        dialog.innerHTML = `
+            <p>${message}</p>
+            <button id="popup-ok">Aceptar</button>
+        `;
+
+        dialog.showModal();
+
+        document.getElementById('popup-ok').addEventListener('click', function () {
+            dialog.close();
+            window.location.href = '../index.html';
+        });
     }
 });
