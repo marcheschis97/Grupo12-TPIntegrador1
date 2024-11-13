@@ -43,17 +43,20 @@
                     <h1>Contactanos</h1>
                     <form class="formulario" id="contact-form" action="../index.html" method="GET">
                         <label for="name">Nombre y Apellido</label>
-                        <input class="form-control tamano-input-contacto" type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                        <input class="form-control tamano-input-contacto" type="text" id="name" name="name" placeholder="Tu nombre completo">
+                        <p id="mensajeNyM"></p>
 
                         <label for="email">Email</label>
-                        <input class="form-control tamano-input-contacto" type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                        <input class="form-control tamano-input-contacto" type="email" id="email" name="email" placeholder="Tu correo electrónico">
+                        <p id="mensajeEmail"></p>
 
                         <label for="phone">Teléfono (opcional)</label>
-                        <input class="form-control tamano-input-contacto" type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)" required>
+                        <input class="form-control tamano-input-contacto" type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)">
+                        <p id="mensajeTelefono"></p>
 
                         <label for="message">Consulta</label>
                         <textarea class="form-control tamano-input-contacto" id="message" name="message" placeholder="Escribe tu consulta aquí..."
-                            required></textarea>
+                            ></textarea>
 
                         <button class="boton-contacto boton-contacto">Enviar</button>
                     </form>
