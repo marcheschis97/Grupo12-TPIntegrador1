@@ -35,7 +35,8 @@ header nav input[type="search"] {
 }
 
 header nav .Carrito {
-    height: 60px;
+    height: 3em;
+
 }
 
 header nav .Carrito a {
@@ -50,9 +51,8 @@ header nav .Carrito a p {
 }
 
 header nav .Carrito img {
-    width: 35px;
-    height: 35px;
-    padding-top: 10px;
+    width: 1.7em;
+    height: 1.7em;
 }
 
 header nav .Logo {
@@ -86,6 +86,14 @@ header .menuprincipal {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.boton-carrito {
+    display: flex;
+    width: 3em;
+    height: 3em;
+    padding-left: 0em;
+    padding-right: 0em;
 }
 
 /*Forma de div*/

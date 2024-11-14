@@ -100,11 +100,15 @@ if (curso) {
     console.error("Curso no encontrado");
 }
 
+document.querySelector("button").addEventListener("click", function () {
+    localStorage.setItem("cursoSeleccionado", JSON.stringify(curso));
+});
+
 const cursosRelacionados = cursosDisponibles.cursos.filter(curso => curso.cursoId !== id);
 const cursosParaMostrar = cursosRelacionados.slice(0, 3);
 const contenedorCursosRelacionados = document.querySelector('#cursos-relacionados');
 
-let cursosHtml = '';  // Variable para acumular el HTML
+let cursosHtml = '';
 
 cursosParaMostrar.forEach(curso => {
     cursosHtml += `

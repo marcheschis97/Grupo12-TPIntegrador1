@@ -1,50 +1,92 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const agregarPersonaBtn = document.querySelector("#boton-agregar-persona"); // Ajusta el selector según tu HTML
-    const contenedorGeneral = document.querySelector("#contenedor-general"); // Ajusta el selector al contenedor principal
-    const precioElemento = document.querySelector(".precio"); // Ajusta el selector según tu HTML
+    const curso = JSON.parse(localStorage.getItem("cursoSeleccionado"));
+    const precioCurso = curso ? curso.precio : 0;
+    let cantidadPersonas = 1;
 
-    let precioBasePorPersona = 100; // Precio base por persona (ajústalo según tus necesidades)
-    let cantidadPersonas = 0;
+    const botonAgregarPersona = document.querySelector(".imagen2 .botonDentro");
+    const contenedorPersonas = document.querySelector(".formulario");
+    const precioTotalElement = document.querySelector(".precio p");
+    const plantillaPersona = document.querySelector(".contenedor-personas");
+    const botonCarrito = document.querySelector(".precio button");
 
-    // Función para actualizar el precio total
-    function actualizarPrecio() {
-        const precioTotal = precioBasePorPersona * cantidadPersonas;
-        precioElemento.textContent = `$${precioTotal}`;
+    const modal = document.createElement("dialog");
+    modal.classList.add("modal-confirmacion");
+    document.body.appendChild(modal);
+
+    const primerBotonEliminar = plantillaPersona.querySelector(".imagen .boton");
+    primerBotonEliminar.addEventListener("click", function (event) {
+        event.preventDefault();
+        plantillaPersona.querySelector("input[name^='nombre']").value = "";
+        plantillaPersona.querySelector("input[name^='apellido']").value = "";
+        plantillaPersona.querySelector("input[name^='dni']").value = "";
+    });
+
+    function actualizarPrecioTotal() {
+        const precioTotal = precioCurso * cantidadPersonas;
+        precioTotalElement.textContent = `$${precioTotal}`;
     }
 
-    // Función para agregar un nuevo div de persona
-    function agregarPersona() {
-        cantidadPersonas++;
+    botonAgregarPersona.addEventListener("click", function (event) {
+        event.preventDefault();
+        const nuevaPersona = plantillaPersona.cloneNode(true);
+        nuevaPersona.querySelector("input[name^='nombre']").value = "";
+        nuevaPersona.querySelector("input[name^='apellido']").value = "";
+        nuevaPersona.querySelector("input[name^='dni']").value = "";
 
-        // Crear el nuevo div contenedor de persona
-        const nuevoDiv = document.createElement("div");
-        nuevoDiv.classList.add("contenedor-personas");
-
-        // Añadir contenido al div (por ejemplo, un botón de eliminar)
-        nuevoDiv.innerHTML = `
-        <p>Persona ${cantidadPersonas}</p>
-        <button class="boton-eliminar">
-          <img src="Cursoparaempresa.jpg" alt="Eliminar persona">
-        </button>
-      `;
-
-        // Añadir evento de eliminar al botón
-        nuevoDiv.querySelector(".boton-eliminar").addEventListener("click", function () {
-            eliminarPersona(nuevoDiv);
+        const botonEliminar = nuevaPersona.querySelector(".imagen .boton");
+        botonEliminar.style.display = "inline-block";
+        botonEliminar.addEventListener("click", function (event) {
+            event.preventDefault();
+            nuevaPersona.remove();
+            cantidadPersonas--;
+            actualizarPrecioTotal();
         });
 
-        // Agregar el nuevo div al contenedor general
-        contenedorGeneral.appendChild(nuevoDiv);
-        actualizarPrecio();
-    }
+        contenedorPersonas.insertBefore(nuevaPersona, botonAgregarPersona.closest(".imagen2"));
+        cantidadPersonas++;
+        actualizarPrecioTotal();
+    });
 
-    // Función para eliminar un div de persona
-    function eliminarPersona(divPersona) {
-        contenedorGeneral.removeChild(divPersona);
-        cantidadPersonas--;
-        actualizarPrecio();
-    }
+    botonCarrito.addEventListener("click", function () {
+        const precioTotal = precioCurso * cantidadPersonas;
+        const modalidad = curso ? curso.modalidad : "Sin modalidad";
 
-    // Agregar evento de click al botón de agregar persona
-    agregarPersonaBtn.addEventListener("click", agregarPersona);
+        let inscritos = [];
+        contenedorPersonas.querySelectorAll(".contenedor-personas").forEach(persona => {
+            const nombre = persona.querySelector("input[name^='nombre']").value;
+            const apellido = persona.querySelector("input[name^='apellido']").value;
+            if (nombre && apellido) {
+                inscritos.push({ nombre, apellido });
+            }
+        });
+
+        const carritoData = {
+            carrito: [
+                {
+                    cursoNombre: curso.cursoNombre,
+                    precioTotal: precioTotal,
+                    cantidadPersonas: cantidadPersonas,
+                    modalidad: modalidad
+                },
+            ],
+        };
+        sessionStorage.setItem("carrito", JSON.stringify(carritoData));
+
+        modal.innerHTML = `
+            <h2>Confirmación de Inscripción</h2>
+            <ul>
+                ${inscritos.map(persona => `<li>${persona.nombre} ${persona.apellido}</li>`).join("")}
+            </ul>
+            <button id="confirmarCompra">Confirmar compra</button>
+        `;
+
+        modal.showModal();
+
+        document.getElementById("confirmarCompra").addEventListener("click", function () {
+            modal.close();
+            window.location.href = "../index.html";
+        });
+    });
+
+    actualizarPrecioTotal();
 });

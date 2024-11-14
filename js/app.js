@@ -78,7 +78,7 @@ const cursosDisponibles = {
             url: "../pages/detalleCursos.html?cursoId=4",
         },
     ],
-    cursosTotal: 315000,
+    cursosTotal: 0,
     moneda: "ARS",
 };
 

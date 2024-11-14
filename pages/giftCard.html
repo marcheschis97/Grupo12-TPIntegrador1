@@ -19,11 +19,11 @@
                 </a>
             </div>
             <input type="search" placeholder="Buscar...">
-            <div class="Carrito">
-                <a href="./carrito.html">
+            <div class="Carrito" id="carrito">
+                <button class="boton-carrito">
                     <img src="../assets/image/carrito.png" alt="Carrito">
-                    <p>1</p>
-                </a>
+                    <p></p>
+                </button>
             </div>
         </nav>
         <div class="menuprincipal">
@@ -58,7 +58,7 @@
                 <div>
                     <label for="nombreDestinatario"> Nombre del destinatario: </label> <br />
                     <input type="text" name="nombreDestinatario" id="nombreDestinatario"
-                        placeholder="Agregar el nombre del destinatario" required/>
+                        placeholder="Agregar el nombre del destinatario" required />
                 </div>
                 <br />
                 <label for="colorFuente">Color de la fuente: </label>
@@ -70,7 +70,7 @@
                     <div class="formulario__colores--color5"> </div>
 
                     <div>
-                        <input type="radio" name="colorFuente" id="color1" required/>
+                        <input type="radio" name="colorFuente" id="color1" required />
                     </div>
                     <div>
                         <input type="radio" name="colorFuente" id="color2" />
@@ -116,21 +116,22 @@
                 <br />
                 <div>
                     <label for="montoTarjeta">Monto $ </label>
-                    <input type="number" name="montoTarjeta" id="montoTarjeta" min="10000" placeholder="Monto mayor a 10.000" required/>
+                    <input type="number" name="montoTarjeta" id="montoTarjeta" min="10000"
+                        placeholder="Monto mayor a 10.000" required />
                 </div>
 
                 <br />
                 <label for="ubicacion">Ubicacion: </label>
                 <div class="formulario__ubicacion">
                     <img src="../assets/fondosCard/ubicacion1.png" alt="Ubicación 1"
-                    class="formulario__ubicacion--ubicacion1" />
+                        class="formulario__ubicacion--ubicacion1" />
                     <img src="../assets/fondosCard/ubicacion2.png" alt="ubicación 2"
-                    class="formulario__ubicacion--ubicacion2" />
+                        class="formulario__ubicacion--ubicacion2" />
                     <img src="../assets/fondosCard/ubicacion3.png" alt="Ubicación 3"
-                    class="formulario__ubicacion--ubicacion3" />
+                        class="formulario__ubicacion--ubicacion3" />
 
                     <div>
-                        <input type="radio" name="ubicacion" id="ubicacion1" required/>
+                        <input type="radio" name="ubicacion" id="ubicacion1" required />
                     </div>
                     <div>
                         <input type="radio" name="ubicacion" id="ubicacion2" />
@@ -148,9 +149,9 @@
                     <img src="../assets/fondosCard/fondo3.jpg" alt="Fondo cuadrados azules"
                         class="formulario__fondo--fondo3">
                     <img src="../assets/fondosCard/fondo4.jpg" alt="Fondo rama" class="formulario__fondo--fondo4" />
-                   
+
                     <div>
-                        <input type="radio" name="fondoTarjeta" id="fondo1" required/>
+                        <input type="radio" name="fondoTarjeta" id="fondo1" required />
                     </div>
                     <div>
                         <input type="radio" name="fondoTarjeta" id="fondo2" />
@@ -163,12 +164,12 @@
                     </div>
                 </div>
                 <br />
-                    <button type="submit"> Confirmar </button>
+                <button type="submit"> Confirmar </button>
 
                 <a href="../index.html" class="boton-vinculo">
                     <button type="button"> Volver </button>
                 </a>
-            
+
             </form>
         </section>
     </main>
@@ -206,6 +207,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/sidebar.js"></script>
 </body>
 
 </html>

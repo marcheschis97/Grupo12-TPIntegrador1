@@ -21,11 +21,11 @@
 
             <input type="search" placeholder="Buscar..." />
 
-            <div class="Carrito">
-                <a href="./carrito.html">
-                    <img src="../assets/image/carrito.png" alt="Carrito" />
-                    <p>1</p>
-                </a>
+            <div class="Carrito" id="carrito">
+                <button class="boton-carrito">
+                    <img src="../assets/image/carrito.png" alt="Carrito">
+                    <p></p>
+                </button>
             </div>
         </nav>
         <div class="menuprincipal">
@@ -42,27 +42,27 @@
                 <h3>Inscripción</h3>
             </div>
 
-            <form method="GET" action="../pages/carrito.html" class="formulario">
+            <form method="GET" action="" class="formulario">
                 <div class="contenedor-personas">
                     <div class="formas">
-                        <label for="nombre-1"></label>
-                        <input type="text" id="nombre-1" name="nombre-1" placeholder="Nombre/s" required />
+                        <label for="nombre"></label>
+                        <input type="text" id="nombre-1" name="nombre" placeholder="Nombre/s" required />
                     </div>
 
                     <div class="formas">
-                        <label for="apellido-3"></label>
-                        <input type="text" id="apellido-3" name="apellido-3" placeholder="Apellido/s" required />
+                        <label for="apellido"></label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido/s" required />
                     </div>
 
                     <div class="formas">
-                        <label for="dni-3"></label>
-                        <input type="text" id="dni-3" name="dni-3" required pattern="[0-9]{8}"
+                        <label for="dni"></label>
+                        <input type="text" id="dni" name="dni" required pattern="[0-9]{8}"
                             title="El DNI debe tener 8 dígitos" placeholder="Número de documento" required />
                     </div>
 
                     <div class="imagen">
                         <button class="boton">
-                            <img src="../assets/image/Cursoparaempresa.jpg" alt="boton" />
+                            <img class="menos" src="../assets/image/Cursoparaempresa.jpg" alt="boton" />
                         </button>
                     </div>
                 </div>
@@ -75,10 +75,10 @@
                 </div>
 
                 <div class="precio">
-                    <p>$000.-</p>
+                    <p>$000</p>
                     <div>
-                        <a href="../pages/carrito.html">
-                            <button class="boton">Pagar curso</button>
+                        <a>
+                            <button type="button" class="boton">Añadir al carrito</button>
                         </a>
                     </div>
                 </div>
@@ -121,6 +121,7 @@
     </footer>
 
     <script src="../js/empresas.js"></script>
+    <script src="../js/sidebar.js"></script>
 </body>
 
 </html>

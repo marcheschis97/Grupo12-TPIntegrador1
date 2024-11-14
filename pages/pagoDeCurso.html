@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realizar pago</title>
 
     <link rel="stylesheet" href="../css/Style.css">
-    <link rel="stylesheet" href="../css/pagoDeCurso.css"/> 
+    <link rel="stylesheet" href="../css/pagoDeCurso.css" />
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,11 +19,11 @@
                 </a>
             </div>
             <input type="search" placeholder="Buscar...">
-            <div class="Carrito">
-                <a href="./carrito.html">
+            <div class="Carrito" id="carrito">
+                <button class="boton-carrito">
                     <img src="../assets/image/carrito.png" alt="Carrito">
-                    <p>1</p>
-                </a>
+                    <p></p>
+                </button>
             </div>
         </nav>
         <div class="menuprincipal">
@@ -36,7 +38,7 @@
         <form class="formulario-pago" method="get" action="../index.html">
             <h4>Medios de pago</h4>
 
-             Débito:
+            Débito:
             <label for="medioDePago" class="textos"></label>
             <div class="formulario-pago__tarjetas">
 
@@ -50,7 +52,7 @@
                 <img src="../assets/fondosCard/visa-logo.jpg" alt="Visa Débito"
                     class="formulario-pago__tarjetas--tarjeta3" />
                 <div>
-                    <input type="radio" name="medioDePago" id="americanDebito" required/>
+                    <input type="radio" name="medioDePago" id="americanDebito" required />
                 </div>
                 <div>
                     <input type="radio" name="medioDePago" id="mastercardDebito" />
@@ -83,7 +85,7 @@
                 </div>
             </div>
 
-             Mercado Pago:
+            Mercado Pago:
             <div class="formulario-pago__mercado-pago">
                 <img src="../assets/fondosCard/mp-credito-logo.jpg" alt="Mercado pago crédito"
                     class="formulario-pago__mercado-pago--c" />
@@ -100,10 +102,8 @@
 
             <div>
                 <label for="nombreDelTitular">Nombre completo del titular: </label>
-                <input type="text" name="nombreDelTitular" id="nombreDelTitular" placeholder="Nombre/s"
-                    required />
-                <input type="text" name="nombreDelTitular" id="apellidoDelTitular" placeholder="Apellido/s"
-                    required />
+                <input type="text" name="nombreDelTitular" id="nombreDelTitular" placeholder="Nombre/s" required />
+                <input type="text" name="nombreDelTitular" id="apellidoDelTitular" placeholder="Apellido/s" required />
             </div>
 
             <div>
@@ -119,8 +119,8 @@
 
             <div>
                 <label for="codigoDeSeguridad">Código de seguridad:</label>
-                <input type="number" name="codigoDeSeguridad" id="codigoDeSeguridad"
-                    placeholder="Código de seguridad" required />
+                <input type="number" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Código de seguridad"
+                    required />
             </div>
 
             <div>
@@ -129,13 +129,16 @@
             </div>
 
             <div>
-                     <button type="submit"> Confirmar pago </button>
+                <button type="submit"> Confirmar pago </button>
 
-                    <a href="../pages/carrito.html" class="boton-vinculo">
-                        <button type="button"> Cancelar </button>
-                    </a>
+                <a href="../pages/carrito.html" class="boton-vinculo">
+                    <button type="button"> Cancelar </button>
+                </a>
         </form>
 
     </main>
+
+    <script src="../js/sidebar.js"></script>
 </body>
+
 </html>

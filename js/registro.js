@@ -1,84 +1,94 @@
-// Selecciona el formulario, el botón de registro y el dialog para mostrar mensajes
-const form = document.querySelector('.form');
-const registrarmeBtn = document.querySelector('.boton-registrarme');
-const popupDialog = document.getElementById('popupDialog');
-const popupMessage = document.getElementById('popupMessage');
-const popupCloseButton = document.getElementById('popupCloseButton');
+document.addEventListener("DOMContentLoaded", function () {
+    const curso = JSON.parse(localStorage.getItem("cursoSeleccionado"));
+    const precioCurso = curso ? curso.precio : 0;
+    let cantidadPersonas = 1;
 
-// Función para mostrar el popup con un mensaje específico
-function showPopup(message) {
-    popupMessage.textContent = message;
-    popupDialog.showModal();
-}
+    const botonAgregarPersona = document.querySelector(".imagen2 .botonDentro");
+    const contenedorPersonas = document.querySelector(".formulario");
+    const precioTotalElement = document.querySelector(".precio p");
+    const plantillaPersona = document.querySelector(".contenedor-personas");
+    const botonCarrito = document.querySelector(".precio button");
 
-// Cierra el popup al hacer clic en el botón de cerrar
-popupCloseButton.addEventListener('click', () => {
-    popupDialog.close();
-});
+    const modal = document.createElement("dialog");
+    modal.classList.add("modal-confirmacion");
+    document.body.appendChild(modal);
 
-// Maneja el evento de registro cuando se hace clic en el botón de registro
-registrarmeBtn.addEventListener('click', function (event) {
-    event.preventDefault();  // Evita que se recargue la página al enviar el formulario
-
-    // Captura los datos del formulario
-    const nombre = form.elements[0].value;
-    const apellido = form.elements[1].value;
-    const dni = form.elements[2].value;
-    const celular = form.elements[3].value;
-    const email = form.elements[4].value;
-    const password = form.elements[5].value;
-    const genero = form.elements[6].value;
-    const calle = form.elements[7].value;
-    const numero = form.elements[8].value;
-    const piso = form.elements[9].value;
-    const dpto = form.elements[10].value;
-    const cp = form.elements[11].value;
-    const provincia = form.elements[12].value;
-    const ciudad = form.elements[13].value;
-
-    // Valida que los campos requeridos no estén vacíos
-    if (!nombre || !apellido || !dni || !celular || !email || !password || !genero || !calle || !numero || !cp || !provincia || !ciudad) {
-        showPopup('Por favor, completa todos los campos requeridos.');
-        return;
+    function actualizarPrecioTotal() {
+        const precioTotal = precioCurso * cantidadPersonas;
+        precioTotalElement.textContent = `$${precioTotal}`;
     }
 
-    // Crea un objeto de usuario con los datos capturados
-    const nuevoUsuario = {
-        nombre,
-        apellido,
-        dni,
-        celular,
-        email,
-        password,
-        genero,
-        direccion: {
-            calle,
-            numero,
-            piso,
-            dpto,
-            cp,
-            provincia,
-            ciudad
-        }
-    };
+    botonAgregarPersona.addEventListener("click", function (event) {
+        event.preventDefault();
+        const nuevaPersona = plantillaPersona.cloneNode(true);
+        nuevaPersona.querySelector("input[name^='nombre']").value = "";
+        nuevaPersona.querySelector("input[name^='apellido']").value = "";
+        nuevaPersona.querySelector("input[name^='dni']").value = "";
 
-    // Obtiene el array de usuarios desde localStorage o crea uno nuevo si no existe
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        const botonEliminar = nuevaPersona.querySelector(".imagen .boton");
+        botonEliminar.style.display = "inline-block";
+        botonEliminar.addEventListener("click", function (event) {
+            event.preventDefault();
+            nuevaPersona.remove();
+            cantidadPersonas--;
+            actualizarPrecioTotal();
+        });
 
-    // Verifica que el email no esté ya registrado
-    const usuarioExistente = usuarios.find(usuario => usuario.email === email);
-    if (usuarioExistente) {
-        showPopup('El email ingresado ya está registrado. Por favor, usa otro email.');
-        return;
-    }
-
-    // Agrega el nuevo usuario al array de usuarios y guarda en localStorage
-    usuarios.push(nuevoUsuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-    // Muestra un mensaje de éxito y redirige a la página de inicio
-    showPopup('Registro exitoso. Ahora puedes iniciar sesión.');
-    popupCloseButton.addEventListener('click', () => {
-        window.location.href = '../pages/inicioSesion.html';
+        contenedorPersonas.insertBefore(nuevaPersona, botonAgregarPersona.closest(".imagen2"));
+        cantidadPersonas++;
+        actualizarPrecioTotal();
     });
+
+    botonCarrito.addEventListener("click", function () {
+        const precioTotal = precioCurso * cantidadPersonas;
+        const modalidad = curso ? curso.modalidad : "Sin modalidad";
+
+        let inscritos = [];
+        contenedorPersonas.querySelectorAll(".contenedor-personas").forEach(persona => {
+            const nombre = persona.querySelector("input[name^='nombre']").value;
+            const apellido = persona.querySelector("input[name^='apellido']").value;
+            if (nombre && apellido) {
+                inscritos.push({ nombre, apellido });
+            }
+        });
+
+        let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+
+        const nuevoCurso = {
+            cursoNombre: curso.cursoNombre,
+            precioTotal: precioTotal,
+            cantidadPersonas: cantidadPersonas,
+            modalidad: modalidad,
+            inscritos: inscritos
+        };
+
+        const cursoExistente = carrito.find(item => item.cursoNombre === nuevoCurso.cursoNombre && item.modalidad === nuevoCurso.modalidad);
+
+        if (cursoExistente) {
+            cursoExistente.precioTotal += nuevoCurso.precioTotal;
+            cursoExistente.cantidadPersonas += nuevoCurso.cantidadPersonas;
+            cursoExistente.inscritos = [...cursoExistente.inscritos, ...nuevoCurso.inscritos];
+        } else {
+            carrito.push(nuevoCurso);
+        }
+
+        sessionStorage.setItem('carrito', JSON.stringify(carrito));
+
+        modal.innerHTML = `
+            <h2>Confirmación de Inscripción</h2>
+            <ul>
+                ${inscritos.map(persona => `<li>${persona.nombre} ${persona.apellido}</li>`).join("")}
+            </ul>
+            <button id="confirmarCompra">Confirmar compra</button>
+        `;
+
+        modal.showModal();
+
+        document.getElementById("confirmarCompra").addEventListener("click", function () {
+            modal.close();
+            window.location.href = "../index.html";
+        });
+    });
+
+    actualizarPrecioTotal();
 });
