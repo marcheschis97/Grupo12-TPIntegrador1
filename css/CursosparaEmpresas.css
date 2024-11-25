@@ -41,6 +41,27 @@ input[type="text"] {
     font-size: 16px;
 }
 
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+input[type="tel"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
 .imagen {
     width: 9em;
     padding-left: 1em;

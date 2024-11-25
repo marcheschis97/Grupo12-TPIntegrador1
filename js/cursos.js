@@ -29,7 +29,7 @@ if (curso) {
                     <li>${curso.requisito1}</li>
                     <li>${curso.requisito2}</li>
                 </ul>
-                <a href="./cursoparaempresas.html">
+                <a href="./cursoparaempresas.html?cursoId=${curso.cursoId}">
                     <button>Inscribirse</button>
                 </a>
             </div>

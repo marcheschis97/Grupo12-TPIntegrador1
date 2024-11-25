@@ -1,94 +1,75 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const curso = JSON.parse(localStorage.getItem("cursoSeleccionado"));
-    const precioCurso = curso ? curso.precio : 0;
-    let cantidadPersonas = 1;
+const form = document.querySelector('.form');
+const registrarmeBtn = document.querySelector('.boton-registrarme');
+const popupDialog = document.getElementById('popupDialog');
+const popupMessage = document.getElementById('popupMessage');
+const popupCloseButton = document.getElementById('popupCloseButton');
 
-    const botonAgregarPersona = document.querySelector(".imagen2 .botonDentro");
-    const contenedorPersonas = document.querySelector(".formulario");
-    const precioTotalElement = document.querySelector(".precio p");
-    const plantillaPersona = document.querySelector(".contenedor-personas");
-    const botonCarrito = document.querySelector(".precio button");
+// Mostrar popup de registro
+function showPopup(message) {
+    popupMessage.textContent = message;
+    popupDialog.showModal();
+}
 
-    const modal = document.createElement("dialog");
-    modal.classList.add("modal-confirmacion");
-    document.body.appendChild(modal);
+popupCloseButton.addEventListener('click', () => {
+    popupDialog.close();
+});
 
-    function actualizarPrecioTotal() {
-        const precioTotal = precioCurso * cantidadPersonas;
-        precioTotalElement.textContent = `$${precioTotal}`;
+// Registro de nuevo usuario
+registrarmeBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const nombre = form.elements['nombre'].value;
+    const apellido = form.elements['apellido'].value;
+    const dni = form.elements['dni'].value;
+    const celular = form.elements['celular'].value;
+    const email = form.elements['email'].value;
+    const password = form.elements['password'].value;
+    const genero = form.elements['genero'].value;
+    const calle = form.elements['calle'].value;
+    const numero = form.elements['numero'].value;
+    const piso = form.elements['piso'].value;
+    const dpto = form.elements['dpto'].value;
+    const cp = form.elements['cp'].value;
+    const provincia = form.elements['provincia'].value;
+    const ciudad = form.elements['ciudad'].value;
+
+    if (!nombre || !apellido || !dni || !celular || !email || !password || !genero || !calle || !numero || !cp || !provincia || !ciudad) {
+        showPopup('Por favor, completa todos los campos requeridos.');
+        return;
     }
 
-    botonAgregarPersona.addEventListener("click", function (event) {
-        event.preventDefault();
-        const nuevaPersona = plantillaPersona.cloneNode(true);
-        nuevaPersona.querySelector("input[name^='nombre']").value = "";
-        nuevaPersona.querySelector("input[name^='apellido']").value = "";
-        nuevaPersona.querySelector("input[name^='dni']").value = "";
-
-        const botonEliminar = nuevaPersona.querySelector(".imagen .boton");
-        botonEliminar.style.display = "inline-block";
-        botonEliminar.addEventListener("click", function (event) {
-            event.preventDefault();
-            nuevaPersona.remove();
-            cantidadPersonas--;
-            actualizarPrecioTotal();
-        });
-
-        contenedorPersonas.insertBefore(nuevaPersona, botonAgregarPersona.closest(".imagen2"));
-        cantidadPersonas++;
-        actualizarPrecioTotal();
-    });
-
-    botonCarrito.addEventListener("click", function () {
-        const precioTotal = precioCurso * cantidadPersonas;
-        const modalidad = curso ? curso.modalidad : "Sin modalidad";
-
-        let inscritos = [];
-        contenedorPersonas.querySelectorAll(".contenedor-personas").forEach(persona => {
-            const nombre = persona.querySelector("input[name^='nombre']").value;
-            const apellido = persona.querySelector("input[name^='apellido']").value;
-            if (nombre && apellido) {
-                inscritos.push({ nombre, apellido });
-            }
-        });
-
-        let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
-
-        const nuevoCurso = {
-            cursoNombre: curso.cursoNombre,
-            precioTotal: precioTotal,
-            cantidadPersonas: cantidadPersonas,
-            modalidad: modalidad,
-            inscritos: inscritos
-        };
-
-        const cursoExistente = carrito.find(item => item.cursoNombre === nuevoCurso.cursoNombre && item.modalidad === nuevoCurso.modalidad);
-
-        if (cursoExistente) {
-            cursoExistente.precioTotal += nuevoCurso.precioTotal;
-            cursoExistente.cantidadPersonas += nuevoCurso.cantidadPersonas;
-            cursoExistente.inscritos = [...cursoExistente.inscritos, ...nuevoCurso.inscritos];
-        } else {
-            carrito.push(nuevoCurso);
+    const nuevoUsuario = {
+        nombre,
+        apellido,
+        dni,
+        celular,
+        email,
+        password,
+        genero,
+        direccion: {
+            calle,
+            numero,
+            piso,
+            dpto,
+            cp,
+            provincia,
+            ciudad
         }
+    };
 
-        sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioExistente = usuarios.find(usuario => usuario.email === email);
 
-        modal.innerHTML = `
-            <h2>Confirmación de Inscripción</h2>
-            <ul>
-                ${inscritos.map(persona => `<li>${persona.nombre} ${persona.apellido}</li>`).join("")}
-            </ul>
-            <button id="confirmarCompra">Confirmar compra</button>
-        `;
+    if (usuarioExistente) {
+        showPopup('El email ingresado ya está registrado. Por favor, usa otro email.');
+        return;
+    }
 
-        modal.showModal();
+    usuarios.push(nuevoUsuario);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-        document.getElementById("confirmarCompra").addEventListener("click", function () {
-            modal.close();
-            window.location.href = "../index.html";
-        });
-    });
-
-    actualizarPrecioTotal();
+    showPopup('Registro exitoso. Ahora puedes iniciar sesión.');
+    popupCloseButton.addEventListener('click', () => {
+        window.location.href = '../pages/inicioSesion.html';
+    }, { once: true });
 });
