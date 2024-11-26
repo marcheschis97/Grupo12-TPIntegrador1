@@ -1,25 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const botonConfirmarPago = document.querySelector("button[type='button']:first-of-type"); // Selecciona el botón Confirmar Pago
-    const formularioPago = document.querySelector(".formulario-pago"); // Selecciona el formulario de pago
+    const botonConfirmarPago = document.querySelector("button[type='button']:first-of-type");
+    const formularioPago = document.querySelector(".formulario-pago");
 
     botonConfirmarPago.addEventListener("click", function () {
-        // Verificar si todos los campos requeridos están completos
         if (formularioPago.checkValidity()) {
-            // Mostrar modal de felicitaciones si todo está correcto
             mostrarModalFelicitaciones();
 
-            // Borrar datos del sessionStorage
             sessionStorage.removeItem("carrito");
             sessionStorage.removeItem("totalPersonas");
             sessionStorage.removeItem("totalCarrito");
         } else {
-            // Resaltar los campos faltantes y mostrar un mensaje de error
             formularioPago.reportValidity();
         }
     });
 
     function mostrarModalFelicitaciones() {
-        // Crear el modal
         const modal = document.createElement("div");
         modal.style.position = "fixed";
         modal.style.top = "0";
@@ -32,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.alignItems = "center";
         modal.style.zIndex = "1000";
 
-        // Contenido del modal
         const modalContent = document.createElement("div");
         modalContent.style.backgroundColor = "#fff";
         modalContent.style.padding = "20px";
@@ -56,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         botonCerrar.addEventListener("click", function () {
             modal.remove();
-            // Redirigir a la página principal
             window.location.href = "../index.html";
         });
 

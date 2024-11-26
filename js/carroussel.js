@@ -24,13 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
         updateImage();
     }
 
-    // Event listeners for buttons
     nextButton.addEventListener("click", nextImage);
     prevButton.addEventListener("click", prevImage);
 
-    // Automatic image change every 5 seconds
     setInterval(nextImage, 5000);
 
-    // Initialize with the first image
     updateImage();
 });

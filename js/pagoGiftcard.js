@@ -1,23 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Seleccionar el botón de "Confirmar pago"
     const botonConfirmar = document.querySelector("button[type='button']");
     const formularioPago = document.querySelector(".formulario-pago");
 
     botonConfirmar.addEventListener("click", function () {
-        // Verificar si todos los campos requeridos están completos
         if (formularioPago.checkValidity()) {
-            // Mostrar modal de felicitaciones si todo está correcto
             mostrarModalFelicitaciones();
         } else {
-            // Resaltar los campos faltantes y mostrar un mensaje de error
             formularioPago.reportValidity();
         }
     });
 });
 
-// Función para mostrar el modal
 function mostrarModalFelicitaciones() {
-    // Crear el modal
     const modal = document.createElement("div");
     modal.style.position = "fixed";
     modal.style.top = "0";
@@ -30,7 +24,6 @@ function mostrarModalFelicitaciones() {
     modal.style.alignItems = "center";
     modal.style.zIndex = "1000";
 
-    // Contenido del modal
     const modalContent = document.createElement("div");
     modalContent.style.backgroundColor = "#fff";
     modalContent.style.padding = "20px";
@@ -54,7 +47,6 @@ function mostrarModalFelicitaciones() {
 
     botonCerrar.addEventListener("click", function () {
         modal.remove();
-        // Redirigir a la página principal
         window.location.href = "../index.html";
     });
 

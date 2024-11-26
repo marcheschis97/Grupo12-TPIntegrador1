@@ -4,7 +4,6 @@ const popupDialog = document.getElementById('popupDialog');
 const popupMessage = document.getElementById('popupMessage');
 const popupCloseButton = document.getElementById('popupCloseButton');
 
-// Mostrar popup de registro
 function showPopup(message) {
     popupMessage.textContent = message;
     popupDialog.showModal();
@@ -14,7 +13,6 @@ popupCloseButton.addEventListener('click', () => {
     popupDialog.close();
 });
 
-// Registro de nuevo usuario
 registrarmeBtn.addEventListener('click', function (event) {
     event.preventDefault();
 

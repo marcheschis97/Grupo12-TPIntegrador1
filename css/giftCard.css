@@ -126,13 +126,14 @@
 
 .main .formulario .formulario__ubicacion {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
 }
 
 .main .formulario .formulario__ubicacion .formulario__ubicacion--ubicacion1,
 .formulario__ubicacion--ubicacion2,
-.formulario__ubicacion--ubicacion3 {
+.formulario__ubicacion--ubicacion3,
+.formulario__ubicacion--ubicacion4 {
     width: 2.5em;
     height: 2em;
 }

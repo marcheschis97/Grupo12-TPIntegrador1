@@ -46,27 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 sidebar.appendChild(cursoElemento);
 
-                // Sumar el precio de este curso al total del carrito
                 totalCarrito += curso.precioTotal;
             });
 
-            // Guardar el monto total en sessionStorage
             sessionStorage.setItem("totalCarrito", totalCarrito);
 
-            // Mostrar el total del carrito
             const totalElemento = document.createElement("div");
             totalElemento.innerHTML = `
                 <h3>Total del Carrito: $${totalCarrito}</h3>
             `;
             sidebar.appendChild(totalElemento);
 
-            // Agregar botón "Ir a pagar"
             const botonPagar = document.createElement("button");
             botonPagar.textContent = "Ir a pagar";
             botonPagar.classList.add("boton-pagar");
             sidebar.appendChild(botonPagar);
 
-            // Listener para el botón de pago
             botonPagar.addEventListener("click", function () {
                 window.location.href = "../pages/pagoDeCurso.html";
             });
@@ -93,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Guardar el total de personas en sessionStorage
         sessionStorage.setItem("totalPersonas", totalPersonas);
 
         cantidadPersonasP.textContent = `${totalPersonas}`;
