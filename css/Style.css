@@ -1,6 +1,6 @@
 body {
     padding: 0px;
-    margin-top: 200px;
+    margin-top: 162px;
     background-color: #faf3e0;
     margin-left: 0;
     margin-right: 0;
@@ -13,6 +13,7 @@ header {
     left: 0;
     width: 100%;
     margin-bottom: 100px;
+    z-index: 11;
 }
 
 nav {
@@ -279,25 +280,24 @@ footer .Redes img {
 }
 
 
-.carousel {
+.carrusel {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Puedes ajustar este tamaño */
-    height: 400px; /* Ajusta este tamaño también */
+    height: 100%;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-image {
+.carrusel-image {
     width: 100%;
-    height: 100%;
+    max-width: 120em;
+    height: 18.4em;
     object-fit: cover;
     display: block;
 }
 
-.carousel-button {
+.carrusel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -305,21 +305,21 @@ footer .Redes img {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     z-index: 10;
 }
 
-.carousel-button.prev {
-    left: 10px;
+.carrusel-button.prev {
+    left: 0.6em;
 }
 
-.carousel-button.next {
-    right: 10px;
+.carrusel-button.next {
+    right: 0.6em;
 }
 
-.carousel-button:hover {
+.carrusel-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }

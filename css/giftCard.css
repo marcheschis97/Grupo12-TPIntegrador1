@@ -7,6 +7,7 @@
 }
 
 .main .vista {
+    position: relative; /* Necesario para que los elementos absolutos se posicionen dentro */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,13 +15,14 @@
     width: 23em;
     background-image: url(../assets/fondosCard/fondo2.jpg);
     background-size: 23em 21em;
+    overflow: hidden; /* Opcional: evita que elementos salgan del área */
 }
 
 .main .vista .vista__precio {
     display: flex;
     align-self: flex-end;
     height: 2em;
-    width: 5em;
+    width: 6em;
     background-color: rgb(10, 10, 10);
 }
 
