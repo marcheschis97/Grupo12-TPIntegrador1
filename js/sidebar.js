@@ -26,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const carritoData = JSON.parse(sessionStorage.getItem("carrito"));
         sidebar.innerHTML = "<h2>Carrito de Cursos</h2>";
 
-        if (!carritoData || carritoData.carrito.length === 0) {
+        let totalCarrito = 0;
+
+        if (!carritoData || carritoData.length === 0) {
             sidebar.innerHTML += "<p>Todavía no se obtuvieron cursos</p>";
         } else {
-            carritoData.carrito.forEach((curso, index) => {
+            carritoData.forEach((curso, index) => {
                 const cursoElemento = document.createElement("div");
                 cursoElemento.innerHTML = `
                     <div class="curso">
@@ -42,13 +44,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     <hr>
                 `;
                 sidebar.appendChild(cursoElemento);
+
+                // Sumar el precio de este curso al total del carrito
+                totalCarrito += curso.precioTotal;
+            });
+
+            // Mostrar el total del carrito
+            const totalElemento = document.createElement("div");
+            totalElemento.innerHTML = `
+                <h3>Total del Carrito: $${totalCarrito}</h3>
+            `;
+            sidebar.appendChild(totalElemento);
+
+            // Agregar botón "Ir a pagar"
+            const botonPagar = document.createElement("button");
+            botonPagar.textContent = "Ir a pagar";
+            botonPagar.classList.add("boton-pagar");
+            sidebar.appendChild(botonPagar);
+
+            // Listener para el botón de pago
+            botonPagar.addEventListener("click", function () {
+                window.location.href = "./carrito.html";
             });
         }
 
         document.querySelectorAll(".eliminar-curso").forEach(boton => {
             boton.addEventListener("click", function () {
                 const index = this.getAttribute("data-index");
-                carritoData.carrito.splice(index, 1);
+                carritoData.splice(index, 1);
                 sessionStorage.setItem("carrito", JSON.stringify(carritoData));
                 mostrarCursosEnSidebar();
                 actualizarCantidadPersonas();
@@ -60,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const carritoData = JSON.parse(sessionStorage.getItem("carrito"));
         let totalPersonas = 0;
 
-        if (carritoData && carritoData.carrito.length > 0) {
-            carritoData.carrito.forEach(curso => {
+        if (carritoData && carritoData.length > 0) {
+            carritoData.forEach(curso => {
                 totalPersonas += curso.cantidadPersonas;
             });
         }
